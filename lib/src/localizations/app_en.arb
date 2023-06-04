@@ -1,0 +1,118 @@
+{
+    "helloWorld": "Hello World!",
+    "@helloWorld": {
+      "description": "The conventional newborn programmer greeting"
+    },
+    "login": "Login",
+    "@login": {
+      "description": "Login page heading"
+    },
+    "usernameFieldLabel": "Username",
+    "@usernameFieldLabel": {
+      "description": "Username field label"
+    },
+    "usernameFieldHint": "Enter Email ID / Contact No.",
+    "@usernameFieldHint": {
+      "description": "Username field hint"
+    },
+    "passwordFieldLabel": "Password",
+    "@passwordFieldLabel": {
+      "description": "Password field label"
+    },
+    "passwordFieldHint": "Enter Password",
+    "@passwordFieldHint": {
+      "description": "Password field hint"
+    },
+    "loginWithOtp": "Login with OTP",
+    "@loginWithOtp": {
+      "description": "Login with OTP title"
+    },
+    "forgotPassword": "Forgot Password?",
+    "@forgotPassword": {
+      "description": "Forgot password button title"
+    },
+    "contactNumberFieldLabel": "Contact Number",
+    "@contactNumberFieldLabel": {
+      "description": "Mobile Number field label"
+    },
+    "contactNumberFieldHint": "Contact Number",
+    "@contactNumberFieldHint": {
+      "description": "Enter Contact Number"
+    },
+    "resendOtpQuestion": "Did not recieve the OTP?",
+    "@resendOtpQuestion": {
+      "description": "Resend OTP Question"
+    },
+    "getOtpButton": "Get OTP",
+    "@getOtpButton": {
+      "description": "Get OTP button text"
+    },
+    "resendOtpButton": "Resend OTP",
+    "@resendOtpButton": {
+      "description": "Resend OTP button text"
+    },
+    "enterOtpFieldLabel": "Enter OTP",
+    "@enterOtpFieldLabel": {
+      "description": "OTP field label"
+    },
+    "submitButton": "Submit",
+    "@submitButton": {
+      "description": "Submit button text"
+    },
+    "resetPassword": "Reset Password",
+    "@resetPassword": {
+      "description": "Reset Password Page Heading"
+    },
+    "resetPasswordPageMessage": "No worries, we’ll send OTP to your\n registered Email ID. 📩",
+    "@resetPasswordPageMessage": {
+      "description": "Reset Password Page Message"
+    },
+    "emailIdFieldLabel": "Email ID",
+    "@emailIdFieldLabel": {
+      "description": "Email ID field label"
+    },
+    "emailIdFieldHint": "Email Address",
+    "@emailIdFieldHint": {
+      "description": "Email field hint"
+    },
+    "resetButton": "Reset",
+    "@resetButton": {
+      "description": "Reset button text"
+    },
+    "backToLogin": "Back to Login",
+    "@backToLogin": {
+      "description": "Back to login button text"
+    },
+    "setNewPassword": "Set New Password",
+    "@setNewPassword": {
+      "description": "Set New Password heading"
+    },
+    "setNewPasswordPageMessage" : "Your Password must be different to\n previously used password. 🔐",
+    "@setNewPasswordPageMessage": {
+      "description": "set new password screen msg" 
+    },
+    "otpFieldLabel": "OTP",
+    "@otpFieldLabel": {
+      "description": "otp field label"
+    },
+    "otpFieldHint": "Enter OTP",
+    "@otpFieldHint": {
+      "description": "OTP field hint"
+    },
+    "newPasswordFieldLabel": "New Password",
+    "@newPasswordFieldLabel": {
+      "description": "New password field label"
+    },
+    "newPasswordFieldHint": "Enter New Password",
+    "@newPasswordFieldHint": {
+      "description": "New Password field hint"
+    },
+    "confirmPasswordFieldLabel": "Confirm Password",
+    "@confirmPasswordFieldLabel": {
+      "description": "Confirm Password field label"
+    },
+    "confirmPasswordFieldHint": "Re-enter New Password",
+    "@confirmPasswordFieldHint": {
+      "description": "Confirm Password field hint"
+    }
+}

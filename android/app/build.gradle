@@ -1,0 +1,138 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = '25'// localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '6'
+}
+
+def flutterVersionName = '2.0.7' //localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0.0'
+}
+
+apply plugin: 'com.android.application'
+// START: FlutterFire Configuration
+apply plugin: 'com.google.gms.google-services'
+// END: FlutterFire Configuration
+apply plugin: 'kotlin-android'
+// apply plugin: 'kotlin-android-extensions'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    compileSdkVersion 33 //flutter.compileSdkVersion
+    //ndkVersion '20.0.5594570'
+    //ndkVersion 21.1.6352462
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.axlerate.portal"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
+        minSdkVersion 24 //flutter.minSdkVersion
+        targetSdkVersion 33 //flutter.targetSdkVersion
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+       release {
+           keyAlias keystoreProperties['keyAlias']
+           keyPassword keystoreProperties['keyPassword']
+           storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+           storePassword keystoreProperties['storePassword']
+       }
+   }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            // signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
+        }
+    }
+
+    // flavorDimensions "app"
+
+    // productFlavors{
+    //     dev{
+    //         dimension "app"
+    //         resValue "string", "app name", "Dev FlavorTest"
+    //         versionNameSuffix "-dev"
+    //     }
+    //     prod {
+    //         dimension "app"
+    //         resValue "string", "app name", "FlavorTest"
+    //         applicationId"com.kanily.flavortest.prod"
+    //     }
+    // }
+
+    flavorDimensions "app"
+    
+    productFlavors {
+       dev {
+            dimension "app"
+            applicationIdSuffix ".dev"
+            resValue "string", "app_name", "Axlerate Portal Dev"
+        }
+        staging {
+            dimension "app"
+            applicationIdSuffix ".staging"
+            resValue "string", "app_name", "Axlerate Portal Staging"
+        }
+        prod {
+            applicationIdSuffix ''
+            dimension "app"
+            resValue "string", "app_name", "Axlerate Portal"
+        }
+   }
+    buildToolsVersion '33.0.2'
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // implementation 'com.google.firebase:firebase-appcheck-debug:16.1.0'
+    // implementation 'com.google.firebase:firebase-appcheck-safetynet:16.1.0'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:31.0.0')
+
+    // Add the dependency for the App Check library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-appcheck-playintegrity'
+}

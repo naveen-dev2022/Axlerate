@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "722126722783",
+    "project_id": "axlerate-portal-dev",
+    "storage_bucket": "axlerate-portal-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722126722783:android:0b7f1a294eaedf5654fb6a",
+        "android_client_info": {
+          "package_name": "com.axlerate.portal.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722126722783-scmjo8sscuo5fibqtg4j6cnfhhuguosc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.axlerate.portal.dev",
+            "certificate_hash": "3db3f9c22cd36d97e9db353150a31a99cb5555ef"
+          }
+        },
+        {
+          "client_id": "722126722783-qokrtf057rtm4edv2ks6vf8bi3vr986n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeUeeafsMvx7ZLPAkA9OYqFHzcI4iZQx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722126722783-qokrtf057rtm4edv2ks6vf8bi3vr986n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "722126722783-193c9seubnvqjui76ur77i53hj7mu226.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.axlerate.portal.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

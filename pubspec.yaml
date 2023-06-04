@@ -1,0 +1,209 @@
+name: axlerate
+description: Fintech for Logistics Ecosystem.
+
+publish_to: "none"
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 2.0.7+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.5
+  # A Flutter package to use fonts from fonts.google.com
+  google_fonts: ^4.0.4
+  # To load SVG format images
+  flutter_svg: ^2.0.6
+  #To remove hash in URL
+  # url_strategy: ^0.2.0
+  # For app navigation
+  # go_router: ^4.2.0
+  #go_router: ^6.0.0
+  # For Local Storage
+  shared_preferences: ^2.1.1
+  # For Field Validators
+  form_field_validator: ^1.1.0
+  # To show a overlay loader with custom loader
+  flutter_overlay_loader: ^2.0.0
+  # For OTP text fied
+  flutter_verification_code: ^1.1.6
+  # Http client for Flutter / Dart
+  dio: ^5.1.2
+  # The Dio request will be retried only for appropriate retryable http statuses
+  dio_smart_retry: ^5.0.0
+  # Flutter plugin for querying information about the application package
+  # Used to show the version name and version code to the user
+  package_info_plus: ^4.0.1
+  # Toast Library for Flutter, Easily create toast messages in single line of code
+  # Used to show toast messages
+  fluttertoast: ^8.2.2
+
+  # Flutter plugin for Firebase Core, enabling connecting to multiple Firebase apps.
+  firebase_core: ^2.13.0
+
+  # Flutter plugin for Firebase Cloud Messaging, a cross-platform messaging solution
+  firebase_messaging: ^14.6.1
+
+  # Flutter plugin providing detailed information about the device (make, model, etc.),
+  # Used to collect Device info
+  # device_info_plus: ^4.1.2
+  # http_mock_adapter: ^0.3.3
+  # Google reCAPTCHA v3 plugin for Flutter Web
+  # Used in Login page to protect website from spam and abuse.
+  g_recaptcha_v3: ^0.0.5
+
+  # Package that allows to pick file absolute paths, with extension filtering support.
+  file_picker: ^5.2.10
+
+  path_provider: ^2.0.15
+  permission_handler: ^8.3.0
+  open_filex:
+  # For app flavors
+  flavor: ^2.0.0
+  # For adaptive navigation
+  # adaptive_navigation: ^0.0.7
+  # Flutter plugin for launching a URL
+  # Used to download the file
+  url_launcher: ^6.1.11
+  # For Flutter StateManagement / Service locator / Dependency injection
+  flutter_riverpod: ^2.3.6
+
+  # An app measurement solution that provides insight on app usage and user engagement
+  firebase_analytics: ^10.4.1
+
+  # Internatinalization
+  intl: ^0.18.0
+  # Dotted boder for image upload
+  dotted_border: ^2.0.0+3
+  # To pick image in all platforms
+  image_picker: ^0.8.7+5
+  # Searchable DropDown button
+  dropdown_plus: ^0.0.9
+  # To toggle filters
+  toggle_switch: ^2.1.0
+
+  # State Add
+  multi_dropdown: ^2.0.0
+
+  # For decoding a json web token
+  jwt_decoder: ^2.0.1
+
+  # # To open Webview in app
+  flutter_widget_from_html_core: any
+  fwfh_webview: ^0.6.2+5
+
+  # Toggle Switch
+  flutter_switch: ^0.3.2
+
+  #For Charts
+  fl_chart: ^0.62.0
+  qr_flutter: ^4.1.0
+
+  # To get mime type of a file
+  mime: ^1.0.4
+  dropdown_textfield: ^1.0.8
+
+  # App Check works alongside other Firebase services to help protect your backend resources from abuse
+  # We use this in Login & Generate OTP
+  firebase_app_check: ^0.1.4+1
+  flutter_map: ^4.0.0
+  latlong2: ^0.8.1
+  flutter_map_animations: ^0.3.0
+
+  # A package provides an easy way to add shimmer effect in Flutter project
+  # Used in side menu before selecting organization
+  shimmer: ^3.0.0
+  csv: ^5.0.2
+  gauges: ^1.0.0
+
+  carousel_slider: ^4.2.1
+
+  lottie: ^2.3.2
+
+  contained_tab_bar_view: ^0.8.0
+
+  # Jailbroken, root, emulator and fake location detection.
+  safe_device: ^1.1.4
+
+  # To check whether there is local authentication available on this device or not
+  local_auth: ^2.1.6
+
+  # A cross platform plugin for displaying and scheduling local notifications.
+  flutter_local_notifications: ^14.1.0
+
+  # # Swiper/Carousel with infinite loop
+  # card_swiper: ^2.0.4
+
+  card_stack_widget: ^0.1.5
+  share_plus: ^7.0.1
+
+  #new Router - auto_route
+  auto_route: ^7.3.1
+
+  # To pick image in web
+  image_picker_web: ^3.0.0+1
+
+  # Convert number to words
+  number_to_character: ^0.0.12
+
+  # signature pad
+  signature: ^5.3.0
+
+  # month and year picker
+  month_picker_dialog: ^2.0.2
+
+  syncfusion_flutter_datagrid: ^21.2.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+  #builder for auto_router
+  auto_route_generator:
+  # # A mock framework inspired by Mockito with APIs for Fakes, Mocks, behavior verification, and stubbing.
+  # # Used for Unit Testing.
+  mockito: ^5.2.0
+  build_runner: ^2.2.0
+  dependency_validator:
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/new_assets/
+    - assets/images/
+    - assets/icons/
+    - assets/new_assets/icons/
+    - assets/new_assets/icons/gps_details/
+    - assets/new_assets/images/
+    - assets/new_assets/logos/
+
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf

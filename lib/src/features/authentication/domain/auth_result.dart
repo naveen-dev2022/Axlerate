@@ -1,0 +1,4 @@
+enum AuthResult {
+  success,
+  pending,
+}

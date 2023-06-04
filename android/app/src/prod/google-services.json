@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "960448262830",
+    "project_id": "axlerate-customer-portal",
+    "storage_bucket": "axlerate-customer-portal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960448262830:android:e22d45f0b71b87b5c5f33f",
+        "android_client_info": {
+          "package_name": "com.axlerate.portal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960448262830-frcssdetmpnts18nen3j8ralbgr4cpqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeAQ_iTYbUIgdcPxpvHPaVvn5E2iiXV8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960448262830-frcssdetmpnts18nen3j8ralbgr4cpqg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "960448262830-m0vd8hgedfoeegbirkciqttik7houk5i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.axlerate.portal"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
