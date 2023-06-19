@@ -504,14 +504,32 @@ class AppNewRouter extends $AppNewRouter {
                                   TransitionsBuilders.noTransition,
                             ),
                             CustomRoute(
+                              path: 'search-home',
+                              page: SearchDashboardHome.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
                               path: 'challan',
                               page: ChallanRoute.page,
                               transitionsBuilder:
                                   TransitionsBuilders.noTransition,
                             ),
                             CustomRoute(
+                              path: 'rc-verification',
+                              page: RcRoute.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
                               path: 'rc-details',
                               page: RcDetailRoute.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
+                              path: 'rc-history',
+                              page: RcHistoryRoute.page,
                               transitionsBuilder:
                                   TransitionsBuilders.noTransition,
                             ),

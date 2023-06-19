@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AxleColors {
   static const axlePrimaryColor = Color(0xFF004F9F); //004F9F
+  static const axleWhite = Color(0xFFFFFFFF); //004F9F
   static const axleSecondaryColor = Color(0xFFFFC62B);
   static const axleBackgroundColor = Color(0xffF2F8FF);
   static const axleBlueColor = Color(0xff0084FF);
@@ -37,19 +38,22 @@ class AxleColors {
   static Color getStatusColor(String status) {
     Color statusColor = Colors.white;
 
-    if (status.toUpperCase().contains("APPROVED") || status.toUpperCase().contains("ACTIVE")) {
+    if (status.toUpperCase().contains("APPROVED") ||
+        status.toUpperCase().contains("ACTIVE")) {
       statusColor = AxleColors.enabledStatusColor;
     } else if (status.toUpperCase().contains("PENDING")) {
       statusColor = AxleColors.pendingStatusColor;
     } else if (status.toUpperCase().contains("INITIATED")) {
       statusColor = AxleColors.axleSecondaryColor;
-    } else if (status.toUpperCase().contains("DECLINED") || status.toUpperCase().contains("REJECTED")) {
+    } else if (status.toUpperCase().contains("DECLINED") ||
+        status.toUpperCase().contains("REJECTED")) {
       statusColor = AxleColors.rejectedStatusColor;
     } else if (status.toUpperCase().contains("DISABLED")) {
       statusColor = AxleColors.disabledStatusColor;
     } else if (status.toUpperCase().contains("TABLE")) {
       statusColor = iconColor;
-    } else if (status.toUpperCase().contains("PARTNER") || status.toUpperCase().contains("ENABLED")) {
+    } else if (status.toUpperCase().contains("PARTNER") ||
+        status.toUpperCase().contains("ENABLED")) {
       statusColor = axlePrimaryColor;
     } else if (status.toUpperCase().contains("INVITED")) {
       statusColor = AxleColors.axleBlueColor;
@@ -61,7 +65,8 @@ class AxleColors {
   static Color getTagStatusColor(String status) {
     Color statusColor = Colors.white;
 
-    if (status.toUpperCase().contains("APPROVED") || status.toUpperCase().contains("ACTIVE")) {
+    if (status.toUpperCase().contains("APPROVED") ||
+        status.toUpperCase().contains("ACTIVE")) {
       statusColor = AxleColors.enabledStatusColor;
     } else if (status.toUpperCase().contains("LOW_BALANCE")) {
       statusColor = AxleColors.pendingStatusColor;

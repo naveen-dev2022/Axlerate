@@ -1,5 +1,5 @@
 import 'package:auto_route/annotations.dart';
-import 'package:axlerate/src/features/home/ecard_verification/presentation/widgets/rc_card_item.dart';
+import 'package:axlerate/src/features/home/ecard_verification/presentation/rc_screen/rc_card_item.dart';
 import 'package:axlerate/src/utils/loading_overlay_widget.dart';
 import 'package:axlerate/src/utils/snackbar_util.dart';
 import 'package:flutter/material.dart';
@@ -83,12 +83,14 @@ class _AadhaarScreenState extends ConsumerState<AadhaarScreen> {
                       children: [
                         UserDataCard(
                           title: "Full Name",
-                          subTitle: aadhaarOtpVerifiedModel?.data?.fullName ?? "",
+                          subTitle:
+                              aadhaarOtpVerifiedModel?.data?.fullName ?? "",
                         ),
                         UserDataCard(
                           title: "Aadhaar Number",
                           subTitle:
-                              aadhaarOtpVerifiedModel?.data?.aadhaarNumber ?? "",
+                              aadhaarOtpVerifiedModel?.data?.aadhaarNumber ??
+                                  "",
                         ),
                         UserDataCard(
                           title: "DOB",
@@ -104,8 +106,8 @@ class _AadhaarScreenState extends ConsumerState<AadhaarScreen> {
                         ),
                         UserDataCard(
                           title: "Face Score",
-                          subTitle:
-                              aadhaarOtpVerifiedModel?.data?.faceScore.toString(),
+                          subTitle: aadhaarOtpVerifiedModel?.data?.faceScore
+                              .toString(),
                         ),
                         UserDataCard(
                           title: "Reference Id",
@@ -139,12 +141,14 @@ class _AadhaarScreenState extends ConsumerState<AadhaarScreen> {
                         UserDataCard(
                           title: "District",
                           subTitle:
-                              aadhaarOtpVerifiedModel?.data?.address?.dist ?? "",
+                              aadhaarOtpVerifiedModel?.data?.address?.dist ??
+                                  "",
                         ),
                         UserDataCard(
                           title: "State",
                           subTitle:
-                              aadhaarOtpVerifiedModel?.data?.address?.state ?? "",
+                              aadhaarOtpVerifiedModel?.data?.address?.state ??
+                                  "",
                         ),
                         UserDataCard(
                           title: "Post",
@@ -164,7 +168,8 @@ class _AadhaarScreenState extends ConsumerState<AadhaarScreen> {
                         UserDataCard(
                           title: "Sub District",
                           subTitle:
-                              aadhaarOtpVerifiedModel?.data?.address?.dist ?? "",
+                              aadhaarOtpVerifiedModel?.data?.address?.dist ??
+                                  "",
                         ),
                         UserDataCard(
                           title: "Street",
@@ -175,13 +180,14 @@ class _AadhaarScreenState extends ConsumerState<AadhaarScreen> {
                         UserDataCard(
                           title: "House",
                           subTitle:
-                              aadhaarOtpVerifiedModel?.data?.address?.house ?? "",
+                              aadhaarOtpVerifiedModel?.data?.address?.house ??
+                                  "",
                         ),
                         UserDataCard(
                           title: "Landmark",
-                          subTitle:
-                              aadhaarOtpVerifiedModel?.data?.address?.landmark ??
-                                  "",
+                          subTitle: aadhaarOtpVerifiedModel
+                                  ?.data?.address?.landmark ??
+                              "",
                         ),
                         UserDataCard(
                           title: "ZipCode",

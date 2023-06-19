@@ -25,12 +25,14 @@ class AppRoute {
   AppRoute(this.path, this.title, this.isAuthorised);
 
   static bool isAuthorisedRoute(path) {
-    AppRoute route = appRoutes.firstWhere((route) => route.path == path, orElse: () => errorRoute);
+    AppRoute route = appRoutes.firstWhere((route) => route.path == path,
+        orElse: () => errorRoute);
     return route.isAuthorised;
   }
 
   static AppRoute getRoute(path) {
-    return appRoutes.firstWhere((route) => route.path == path, orElse: () => errorRoute);
+    return appRoutes.firstWhere((route) => route.path == path,
+        orElse: () => errorRoute);
   }
 }
 
@@ -59,12 +61,15 @@ class RouteUtils {
   }
 
   static String getDashboardPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     // log("orgId in PATH :: $orgId");
 
-    String orgType = sharedPreferences.getString(Storage.currentlyPickedOrgType) ?? '';
+    String orgType =
+        sharedPreferences.getString(Storage.currentlyPickedOrgType) ?? '';
 
-    String orgEnrolId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? '';
+    String orgEnrolId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? '';
     if (orgType.contains("LOGISTICS")) {
       return '/app/$orgEnrolId/customers/$orgEnrolId'.toLowerCase();
     }
@@ -88,27 +93,33 @@ class RouteUtils {
   }
 
   static String getVehiclesPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/vehicles';
   }
 
   static String getTransactionsPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/transactions';
   }
 
   static String getGpsPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/gps';
   }
 
   static String getCustomerspath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/customers';
   }
 
   static String getCustomerDashboardPath({required String custEnrollId}) {
-    String orgId = (sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "").toLowerCase();
+    String orgId =
+        (sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "")
+            .toLowerCase();
     return '/app/$orgId/${AxleRoutePath.customers}/${custEnrollId.toLowerCase()}';
   }
 
@@ -134,68 +145,81 @@ class RouteUtils {
   }
 
   static String getPartnersPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/partners';
   }
 
   static String getPartnersDashboardPath(String partnerId) {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     // return '/app/${orgId.toLowerCase()}/partners/view/$partnerId';
     return '/app/${orgId.toLowerCase()}/partners/$partnerId';
   }
 
   static String getCreatePartnerPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/partners/create';
   }
 
   static String getInviteCustomerPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/customers/invite';
   }
 
   static String getCreateCustomerPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/customers/create';
   }
 
   static String getStaffsPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/staffs';
   }
 
   static String getCommissionsPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/commissions';
   }
 
   static String getStaffsListPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/staffs/view';
   }
 
   static String getAddStaffsPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/staffs/create';
   }
 
   static String getTagManagementPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/${AxleRoutePath.tagManagement}';
   }
 
   static String getUserManagementPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/${AxleRoutePath.userManagement}';
   }
 
   static String getTransactionsHistoryPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/transactions';
   }
 
   static String getVehicleDashboardPath(String orgEnrolId, String vehicleId) {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/customers/$orgEnrolId/vehicles/${vehicleId.toLowerCase()}';
   }
 
@@ -207,26 +231,32 @@ class RouteUtils {
     return '${getVehicleDashboardPath(orgEnrolId, vehicleId)}/services';
   }
 
-  static String getVehicleManageTagPath(String orgEnrollId, String vehicleRegNo) {
+  static String getVehicleManageTagPath(
+      String orgEnrollId, String vehicleRegNo) {
     return '${getVehicleDashboardPath(orgEnrollId, vehicleRegNo)}/manage-tag';
   }
 
-  static String getVehicleManageFuelCardPath(String orgEnrollId, String vehicleRegNo) {
+  static String getVehicleManageFuelCardPath(
+      String orgEnrollId, String vehicleRegNo) {
     return ('${getVehicleDashboardPath(orgEnrollId, vehicleRegNo)}/${AxleRoutePath.manageVehicleFuelCardPreference}')
         .toLowerCase();
   }
 
-  static String getVehicleFuelFundLoadPath(String orgEnrollId, String vehicleRegNo) {
-    return ('${getVehicleDashboardPath(orgEnrollId, vehicleRegNo)}/vehicle-fund-load').toLowerCase();
+  static String getVehicleFuelFundLoadPath(
+      String orgEnrollId, String vehicleRegNo) {
+    return ('${getVehicleDashboardPath(orgEnrollId, vehicleRegNo)}/vehicle-fund-load')
+        .toLowerCase();
   }
 
   static String getFundLoadPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgId/${AxleRoutePath.fundLoad}';
   }
 
   static String getGpsManagePath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/gps-manage';
   }
 
@@ -235,52 +265,80 @@ class RouteUtils {
   }
 
   static String getPaymentsPath(String userOrgEnrollId) {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/customers/${userOrgEnrollId.toLowerCase()}/payments';
   }
 
   static String getPaymentsEnablePath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/payments/enable';
   }
 
   static String getInvoicePath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/invoice';
   }
 
   static String getECardPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/e-card-verification';
   }
 
+  static String getECardSearch() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/search-home';
+  }
+
   static String getChallanPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/e-card-verification/challan';
   }
 
   static String getRcPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/rc-verification';
+  }
+
+  static String getRcDetailPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/e-card-verification/rc-details';
   }
 
+  static String getRcHistoryPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/rc-history';
+  }
+
   static String getPanPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/e-card-verification/pan-details';
   }
 
   static String getAadhaarPath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/e-card-verification/aadhaar';
   }
 
   static String getDrivingLicensePath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/e-card-verification/driving-license';
   }
 
   static String getCbilScorePath() {
-    String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/e-card-verification/cbil-score';
   }
 
@@ -289,17 +347,21 @@ class RouteUtils {
   //   return '/app/${orgId.toLowerCase()}/payments/create';
   // }
 
-  static String getVehicleGpsDetailsPath(String orgEnrolId, String vehicleRegNo) {
+  static String getVehicleGpsDetailsPath(
+      String orgEnrolId, String vehicleRegNo) {
     return '${getVehicleDashboardPath(orgEnrolId, vehicleRegNo)}/gps';
   }
 
   static String getStaffDashboard(String orgEnrolId, String staffEnrolId) {
-    String orgEnrollId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
-    return '/app/$orgEnrollId/customers/$orgEnrolId/staffs/$staffEnrolId'.toLowerCase();
+    String orgEnrollId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/$orgEnrollId/customers/$orgEnrolId/staffs/$staffEnrolId'
+        .toLowerCase();
   }
 
   static String getStaffManageCardPath(String orgEnrolId, String staffEnrolId) {
-    return ('${getStaffDashboard(orgEnrolId, staffEnrolId)}/manage-card').toLowerCase();
+    return ('${getStaffDashboard(orgEnrolId, staffEnrolId)}/manage-card')
+        .toLowerCase();
   }
 
   static String getOrgManageCardPath(String orgEnrolId) {
@@ -313,15 +375,18 @@ class RouteUtils {
   }
 
   static String staffEnablePpi(String orgEnrolId, String staffEnrolId) {
-    return ('${getStaffDashboard(orgEnrolId, staffEnrolId)}/add-card').toLowerCase();
+    return ('${getStaffDashboard(orgEnrolId, staffEnrolId)}/add-card')
+        .toLowerCase();
   }
 
   static String getStaffServices(String orgEnrolId, String staffEnrolId) {
-    return ('${getStaffDashboard(orgEnrolId, staffEnrolId)}/add-services').toLowerCase();
+    return ('${getStaffDashboard(orgEnrolId, staffEnrolId)}/add-services')
+        .toLowerCase();
   }
 
   static String getVehiclesListPath() {
-    String orgEnrollId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    String orgEnrollId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/$orgEnrollId/vehicles/view'.toLowerCase();
   }
 }

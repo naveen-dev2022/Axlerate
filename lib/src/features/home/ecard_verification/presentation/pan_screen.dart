@@ -1,5 +1,5 @@
 import 'package:auto_route/annotations.dart';
-import 'package:axlerate/src/features/home/ecard_verification/presentation/widgets/rc_card_item.dart';
+import 'package:axlerate/src/features/home/ecard_verification/presentation/rc_screen/rc_card_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -28,8 +28,9 @@ class _PanScreenState extends ConsumerState<PanScreen> {
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       ref.read(panStateProvider.notifier).state = null;
-      ref.read(panStateProvider.notifier).state =
-          await ref.read(eCardControllerProvider).fetchPanDetailsData(idNumber: '');
+      ref.read(panStateProvider.notifier).state = await ref
+          .read(eCardControllerProvider)
+          .fetchPanDetailsData(idNumber: '');
     });
     super.initState();
   }

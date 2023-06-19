@@ -81,7 +81,7 @@ class ECardController {
   }) async {
     RcEntity res = RcEntity.unknown();
 
-    Map<String, dynamic> postParam = {"id_number": "TN38CH1948"};
+    Map<String, dynamic> postParam = {"id_number": idNumber};
 
     try {
       // String userOrgId = ref.read(sharedPreferenceProvider).getString(Storage.currentlyPickedOrgId) ?? '';

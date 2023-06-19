@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:auto_route/annotations.dart';
 import 'package:axlerate/Themes/axle_colors.dart';
-import 'package:axlerate/src/features/home/ecard_verification/presentation/widgets/rc_card_item.dart';
+import 'package:axlerate/src/features/home/ecard_verification/presentation/rc_screen/rc_card_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../../Themes/common_style_util.dart';

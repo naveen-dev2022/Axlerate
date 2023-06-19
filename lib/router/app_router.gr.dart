@@ -8,64 +8,70 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i71;
+import 'package:auto_route/auto_route.dart' as _i74;
 import 'package:axlerate/src/common/common_widgets/axle_auto_router.dart'
-    as _i54;
-import 'package:axlerate/src/common/common_widgets/axle_cutomers_router.dart'
-    as _i55;
-import 'package:axlerate/src/common/common_widgets/axle_partner_commissions_router.dart'
-    as _i63;
-import 'package:axlerate/src/common/common_widgets/axle_partners_router.dart'
-    as _i60;
-import 'package:axlerate/src/common/common_widgets/axle_staffs_router.dart'
-    as _i52;
-import 'package:axlerate/src/common/common_widgets/axle_vehicles_router.dart'
-    as _i53;
-import 'package:axlerate/src/common/common_widgets/org_dashboard_screen.dart'
-    as _i62;
-import 'package:axlerate/src/common/common_widgets/selected_customer_screen.dart'
-    as _i66;
-import 'package:axlerate/src/common/common_widgets/selected_org_screen.dart'
-    as _i61;
-import 'package:axlerate/src/common/common_widgets/selected_partner_screen.dart'
-    as _i65;
-import 'package:axlerate/src/common/common_widgets/selected_staff_screen.dart'
-    as _i58;
-import 'package:axlerate/src/common/common_widgets/selected_vehicle_screen.dart'
     as _i56;
-import 'package:axlerate/src/common/common_widgets/staff_router.dart' as _i59;
-import 'package:axlerate/src/common/common_widgets/user_not_found_screen.dart'
+import 'package:axlerate/src/common/common_widgets/axle_cutomers_router.dart'
+    as _i57;
+import 'package:axlerate/src/common/common_widgets/axle_partner_commissions_router.dart'
+    as _i65;
+import 'package:axlerate/src/common/common_widgets/axle_partners_router.dart'
+    as _i62;
+import 'package:axlerate/src/common/common_widgets/axle_staffs_router.dart'
+    as _i54;
+import 'package:axlerate/src/common/common_widgets/axle_vehicles_router.dart'
+    as _i55;
+import 'package:axlerate/src/common/common_widgets/org_dashboard_screen.dart'
     as _i64;
-import 'package:axlerate/src/common/common_widgets/vehicle_router.dart' as _i57;
+import 'package:axlerate/src/common/common_widgets/selected_customer_screen.dart'
+    as _i68;
+import 'package:axlerate/src/common/common_widgets/selected_org_screen.dart'
+    as _i63;
+import 'package:axlerate/src/common/common_widgets/selected_partner_screen.dart'
+    as _i67;
+import 'package:axlerate/src/common/common_widgets/selected_staff_screen.dart'
+    as _i60;
+import 'package:axlerate/src/common/common_widgets/selected_vehicle_screen.dart'
+    as _i58;
+import 'package:axlerate/src/common/common_widgets/staff_router.dart' as _i61;
+import 'package:axlerate/src/common/common_widgets/user_not_found_screen.dart'
+    as _i66;
+import 'package:axlerate/src/common/common_widgets/vehicle_router.dart' as _i59;
 import 'package:axlerate/src/features/authentication/presentation/account_activation/account_activation_page.dart'
-    as _i49;
-import 'package:axlerate/src/features/authentication/presentation/account_activation/account_activation_router.dart'
-    as _i48;
-import 'package:axlerate/src/features/authentication/presentation/login_with_otp/login_with_otp_form.dart'
-    as _i50;
-import 'package:axlerate/src/features/authentication/presentation/shared/auth_background.dart'
     as _i51;
+import 'package:axlerate/src/features/authentication/presentation/account_activation/account_activation_router.dart'
+    as _i50;
+import 'package:axlerate/src/features/authentication/presentation/login_with_otp/login_with_otp_form.dart'
+    as _i52;
+import 'package:axlerate/src/features/authentication/presentation/shared/auth_background.dart'
+    as _i53;
 import 'package:axlerate/src/features/home/dashboard/select_organization_page.dart'
-    as _i21;
+    as _i23;
 import 'package:axlerate/src/features/home/dashboard/shared/axle_view.dart'
-    as _i20;
+    as _i22;
 import 'package:axlerate/src/features/home/ecard_verification/ecard_verfication_router.dart'
     as _i7;
 import 'package:axlerate/src/features/home/ecard_verification/presentation/aadhaar_screen.dart'
-    as _i68;
+    as _i12;
 import 'package:axlerate/src/features/home/ecard_verification/presentation/challan_screen.dart'
-    as _i8;
-import 'package:axlerate/src/features/home/ecard_verification/presentation/cibil_detail_screen.dart'
-    as _i70;
-import 'package:axlerate/src/features/home/ecard_verification/presentation/driving_license_screen.dart'
-    as _i69;
-import 'package:axlerate/src/features/home/ecard_verification/presentation/ecard_dashboard.dart'
-    as _i9;
-import 'package:axlerate/src/features/home/ecard_verification/presentation/pan_screen.dart'
-    as _i67;
-import 'package:axlerate/src/features/home/ecard_verification/presentation/rc_screen.dart'
     as _i10;
-import 'package:axlerate/src/features/home/error_dashbaord.dart' as _i25;
+import 'package:axlerate/src/features/home/ecard_verification/presentation/cibil_detail_screen.dart'
+    as _i9;
+import 'package:axlerate/src/features/home/ecard_verification/presentation/driving_license_screen.dart'
+    as _i11;
+import 'package:axlerate/src/features/home/ecard_verification/presentation/home/ecard_dashboard.dart'
+    as _i69;
+import 'package:axlerate/src/features/home/ecard_verification/presentation/home/search_home.dart'
+    as _i70;
+import 'package:axlerate/src/features/home/ecard_verification/presentation/pan_screen.dart'
+    as _i8;
+import 'package:axlerate/src/features/home/ecard_verification/presentation/rc_screen/rc_detail_screen.dart'
+    as _i71;
+import 'package:axlerate/src/features/home/ecard_verification/presentation/rc_screen/rc_history.dart'
+    as _i73;
+import 'package:axlerate/src/features/home/ecard_verification/presentation/rc_screen/rc_screen.dart'
+    as _i72;
+import 'package:axlerate/src/features/home/error_dashbaord.dart' as _i27;
 import 'package:axlerate/src/features/home/gps/presentation/add_gps_devices.dart'
     as _i4;
 import 'package:axlerate/src/features/home/gps/presentation/axle_gps_router.dart'
@@ -73,35 +79,35 @@ import 'package:axlerate/src/features/home/gps/presentation/axle_gps_router.dart
 import 'package:axlerate/src/features/home/gps/presentation/list_gps_page.dart'
     as _i6;
 import 'package:axlerate/src/features/home/invoice/presentation/create_invoice.dart'
-    as _i47;
+    as _i49;
 import 'package:axlerate/src/features/home/logistics/presentation/complete_logistics_invite.dart'
-    as _i42;
-import 'package:axlerate/src/features/home/logistics/presentation/create_logistics_page.dart'
-    as _i43;
-import 'package:axlerate/src/features/home/logistics/presentation/dashboard/widgets/vehiclewise_split.dart'
-    as _i41;
-import 'package:axlerate/src/features/home/logistics/presentation/fund_transfer_page.dart'
-    as _i39;
-import 'package:axlerate/src/features/home/logistics/presentation/invite_logistics_page.dart'
-    as _i37;
-import 'package:axlerate/src/features/home/logistics/presentation/list_logistics_page.dart'
-    as _i45;
-import 'package:axlerate/src/features/home/logistics/presentation/logistics_dashboard_by_enroll_id.dart'
-    as _i40;
-import 'package:axlerate/src/features/home/logistics/presentation/logistics_detailed_screen.dart'
-    as _i36;
-import 'package:axlerate/src/features/home/logistics/presentation/set_logisctics_fuel_preference_page.dart'
-    as _i38;
-import 'package:axlerate/src/features/home/logistics/presentation/set_org_ppi_preference_page.dart'
     as _i44;
+import 'package:axlerate/src/features/home/logistics/presentation/create_logistics_page.dart'
+    as _i45;
+import 'package:axlerate/src/features/home/logistics/presentation/dashboard/widgets/vehiclewise_split.dart'
+    as _i43;
+import 'package:axlerate/src/features/home/logistics/presentation/fund_transfer_page.dart'
+    as _i41;
+import 'package:axlerate/src/features/home/logistics/presentation/invite_logistics_page.dart'
+    as _i39;
+import 'package:axlerate/src/features/home/logistics/presentation/list_logistics_page.dart'
+    as _i47;
+import 'package:axlerate/src/features/home/logistics/presentation/logistics_dashboard_by_enroll_id.dart'
+    as _i42;
+import 'package:axlerate/src/features/home/logistics/presentation/logistics_detailed_screen.dart'
+    as _i38;
+import 'package:axlerate/src/features/home/logistics/presentation/set_logisctics_fuel_preference_page.dart'
+    as _i40;
+import 'package:axlerate/src/features/home/logistics/presentation/set_org_ppi_preference_page.dart'
+    as _i46;
 import 'package:axlerate/src/features/home/partner/commission_history_page.dart'
-    as _i16;
-import 'package:axlerate/src/features/home/partner/presentation/create_partner_page.dart'
-    as _i19;
-import 'package:axlerate/src/features/home/partner/presentation/list_partners_page.dart'
-    as _i17;
-import 'package:axlerate/src/features/home/partner/presentation/partner_dashboard.dart'
     as _i18;
+import 'package:axlerate/src/features/home/partner/presentation/create_partner_page.dart'
+    as _i21;
+import 'package:axlerate/src/features/home/partner/presentation/list_partners_page.dart'
+    as _i19;
+import 'package:axlerate/src/features/home/partner/presentation/partner_dashboard.dart'
+    as _i20;
 import 'package:axlerate/src/features/home/payments/presentation/axle_payment_router.dart'
     as _i2;
 import 'package:axlerate/src/features/home/payments/presentation/create_payment_page.dart'
@@ -109,57 +115,57 @@ import 'package:axlerate/src/features/home/payments/presentation/create_payment_
 import 'package:axlerate/src/features/home/payments/presentation/payments_page.dart'
     as _i1;
 import 'package:axlerate/src/features/home/profile/presentation/profile_page.dart'
-    as _i24;
-import 'package:axlerate/src/features/home/services/presentation/add_axle_service_page.dart'
-    as _i46;
-import 'package:axlerate/src/features/home/static_dashbaord.dart' as _i23;
-import 'package:axlerate/src/features/home/transactions/presentation/transaction_history_page.dart'
-    as _i22;
-import 'package:axlerate/src/features/home/user/presentstion/add_service_to_user.dart'
-    as _i11;
-import 'package:axlerate/src/features/home/user/presentstion/create_user_page.dart'
-    as _i15;
-import 'package:axlerate/src/features/home/user/presentstion/list_users_page.dart'
-    as _i12;
-import 'package:axlerate/src/features/home/user/presentstion/manage_card_page.dart'
-    as _i14;
-import 'package:axlerate/src/features/home/user/presentstion/user_child_dashboard.dart'
-    as _i13;
-import 'package:axlerate/src/features/home/vehicles/list_vehicle_by_org.dart'
     as _i26;
-import 'package:axlerate/src/features/home/vehicles/presentation/create_vehicle_page.dart'
-    as _i27;
-import 'package:axlerate/src/features/home/vehicles/presentation/dashboard/vehicle_dashboard.dart'
+import 'package:axlerate/src/features/home/services/presentation/add_axle_service_page.dart'
+    as _i48;
+import 'package:axlerate/src/features/home/static_dashbaord.dart' as _i25;
+import 'package:axlerate/src/features/home/transactions/presentation/transaction_history_page.dart'
+    as _i24;
+import 'package:axlerate/src/features/home/user/presentstion/add_service_to_user.dart'
+    as _i13;
+import 'package:axlerate/src/features/home/user/presentstion/create_user_page.dart'
+    as _i17;
+import 'package:axlerate/src/features/home/user/presentstion/list_users_page.dart'
+    as _i14;
+import 'package:axlerate/src/features/home/user/presentstion/manage_card_page.dart'
+    as _i16;
+import 'package:axlerate/src/features/home/user/presentstion/user_child_dashboard.dart'
+    as _i15;
+import 'package:axlerate/src/features/home/vehicles/list_vehicle_by_org.dart'
     as _i28;
-import 'package:axlerate/src/features/home/vehicles/presentation/dashboard/widgets/vehicle_fuel_fund_load_page.dart'
+import 'package:axlerate/src/features/home/vehicles/presentation/create_vehicle_page.dart'
     as _i29;
-import 'package:axlerate/src/features/home/vehicles/presentation/gps_details.dart'
+import 'package:axlerate/src/features/home/vehicles/presentation/dashboard/vehicle_dashboard.dart'
     as _i30;
-import 'package:axlerate/src/features/home/vehicles/presentation/list_vehicle_page.dart'
+import 'package:axlerate/src/features/home/vehicles/presentation/dashboard/widgets/vehicle_fuel_fund_load_page.dart'
     as _i31;
-import 'package:axlerate/src/features/home/vehicles/presentation/services/enable_vehicle_service.dart'
-    as _i35;
-import 'package:axlerate/src/features/home/vehicles/presentation/set_vehicle_fuel_preference_page.dart'
-    as _i33;
-import 'package:axlerate/src/features/home/vehicles/presentation/tag/widgets/manage_tag.dart'
-    as _i34;
-import 'package:axlerate/src/features/home/vehicles/presentation/vehicle_detailed_screen.dart'
+import 'package:axlerate/src/features/home/vehicles/presentation/gps_details.dart'
     as _i32;
-import 'package:flutter/cupertino.dart' as _i74;
-import 'package:flutter/foundation.dart' as _i73;
-import 'package:flutter/material.dart' as _i72;
+import 'package:axlerate/src/features/home/vehicles/presentation/list_vehicle_page.dart'
+    as _i33;
+import 'package:axlerate/src/features/home/vehicles/presentation/services/enable_vehicle_service.dart'
+    as _i37;
+import 'package:axlerate/src/features/home/vehicles/presentation/set_vehicle_fuel_preference_page.dart'
+    as _i35;
+import 'package:axlerate/src/features/home/vehicles/presentation/tag/widgets/manage_tag.dart'
+    as _i36;
+import 'package:axlerate/src/features/home/vehicles/presentation/vehicle_detailed_screen.dart'
+    as _i34;
+import 'package:flutter/cupertino.dart' as _i77;
+import 'package:flutter/foundation.dart' as _i76;
+import 'package:flutter/material.dart' as _i75;
 
-abstract class $AppNewRouter extends _i71.RootStackRouter {
+abstract class $AppNewRouter extends _i74.RootStackRouter {
   $AppNewRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i71.PageFactory> pagesMap = {
+  final Map<String, _i74.PageFactory> pagesMap = {
     PaymentsRoute.name: (routeData) {
       final pathParams = routeData.inheritedPathParams;
       final args = routeData.argsAs<PaymentsRouteArgs>(
           orElse: () =>
               PaymentsRouteArgs(enrolId: pathParams.getString('custId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i1.PaymentsPage(
           key: args.key,
@@ -168,7 +174,7 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       );
     },
     AxlePaymentRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i2.AxlePaymentRouter(),
       );
@@ -178,7 +184,7 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<CreatePaymentRouteArgs>(
           orElse: () => CreatePaymentRouteArgs(
               orgEnrollId: pathParams.getString('orgEnrollId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i3.CreatePaymentPage(
           orgEnrollId: args.orgEnrollId,
@@ -187,45 +193,57 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       );
     },
     AddGpsDevices.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i4.AddGpsDevices(),
       );
     },
     AxleGpsRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i5.AxleGpsRouter(),
       );
     },
     ListGpsDevices.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i6.ListGpsDevices(),
       );
     },
     ECardVerificationRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i7.ECardVerificationRouter(),
       );
     },
+    PanRoute.name: (routeData) {
+      return _i74.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i8.PanScreen(),
+      );
+    },
+    CibilRoute.name: (routeData) {
+      return _i74.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i9.CibilScreen(),
+      );
+    },
     ChallanRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.ChallanScreen(),
+        child: const _i10.ChallanScreen(),
       );
     },
-    EcardVerificationDashboard.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+    DrivingLicenseRoute.name: (routeData) {
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.EcardVerificationDashboard(),
+        child: const _i11.DrivingLicenseScreen(),
       );
     },
-    RcDetailRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+    AadhaarRoute.name: (routeData) {
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.RcDetailScreen(),
+        child: const _i12.AadhaarScreen(),
       );
     },
     AddUserService.name: (routeData) {
@@ -235,9 +253,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
                 userEnrollmentId: pathParams.getString('staffEnrolId'),
                 orgenrollIdOfUser: pathParams.getString('custId'),
               ));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i11.AddUserService(
+        child: _i13.AddUserService(
           key: args.key,
           userEnrollmentId: args.userEnrollmentId,
           orgenrollIdOfUser: args.orgenrollIdOfUser,
@@ -247,9 +265,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
     ListUsersRoute.name: (routeData) {
       final args = routeData.argsAs<ListUsersRouteArgs>(
           orElse: () => const ListUsersRouteArgs());
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i12.ListUsersPage(
+        child: _i14.ListUsersPage(
           key: args.key,
           userRole: args.userRole,
         ),
@@ -262,9 +280,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
                 userEnrollmentId: pathParams.getString('staffEnrolId'),
                 orgenrollIdOfUser: pathParams.getString('custId'),
               ));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i13.UserChildDashboard(
+        child: _i15.UserChildDashboard(
           key: args.key,
           isDash: args.isDash,
           userEnrollmentId: args.userEnrollmentId,
@@ -279,9 +297,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
                 userOrgId: pathParams.getString('custId'),
                 userEnrolmentId: pathParams.getString('staffEnrolId'),
               ));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i14.ManageCardPage(
+        child: _i16.ManageCardPage(
           key: args.key,
           userOrgId: args.userOrgId,
           userEnrolmentId: args.userEnrolmentId,
@@ -289,21 +307,21 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       );
     },
     CreateUserRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i15.CreateUserPage(),
+        child: const _i17.CreateUserPage(),
       );
     },
     CommissionHistoryRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i16.CommissionHistoryPage(),
+        child: const _i18.CommissionHistoryPage(),
       );
     },
     ListPartnerRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i17.ListPartnerPage(),
+        child: const _i19.ListPartnerPage(),
       );
     },
     PartnerDashboard.name: (routeData) {
@@ -311,9 +329,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<PartnerDashboardArgs>(
           orElse: () =>
               PartnerDashboardArgs(orgId: pathParams.getString('partnerId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i18.PartnerDashboard(
+        child: _i20.PartnerDashboard(
           key: args.key,
           orgId: args.orgId,
           orgType: args.orgType,
@@ -321,50 +339,50 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       );
     },
     CreatePartnerRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i19.CreatePartnerPage(),
+        child: const _i21.CreatePartnerPage(),
       );
     },
     AxleScaffold.name: (routeData) {
       final args = routeData.argsAs<AxleScaffoldArgs>(
           orElse: () => const AxleScaffoldArgs());
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i20.AxleView(
+        child: _i22.AxleView(
           key: args.key,
           appBarTitle: args.appBarTitle,
         ),
       );
     },
     SelectOrgnaizationRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i21.SelectOrgnaizationPage(),
+        child: const _i23.SelectOrgnaizationPage(),
       );
     },
     TransactionHistoryRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i22.TransactionHistoryPage(),
+        child: const _i24.TransactionHistoryPage(),
       );
     },
     StaticDashbaord.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i23.StaticDashbaord(),
+        child: const _i25.StaticDashbaord(),
       );
     },
     ProfileRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i24.ProfilePage(),
+        child: const _i26.ProfilePage(),
       );
     },
     ErrorDashbaord.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i25.ErrorDashbaord(),
+        child: const _i27.ErrorDashbaord(),
       );
     },
     ListVehicleByCustomer.name: (routeData) {
@@ -372,18 +390,18 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<ListVehicleByCustomerArgs>(
           orElse: () => ListVehicleByCustomerArgs(
               custId: pathParams.getString('custId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i26.ListVehicleByCustomer(
+        child: _i28.ListVehicleByCustomer(
           custId: args.custId,
           key: args.key,
         ),
       );
     },
     CreateVehicleRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i27.CreateVehiclePage(),
+        child: const _i29.CreateVehiclePage(),
       );
     },
     VehicleDashboard.name: (routeData) {
@@ -393,9 +411,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
                 vehicleRegNo: pathParams.getString('vehicleRegNo'),
                 orgEnrolld: pathParams.getString('custId'),
               ));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i28.VehicleDashboard(
+        child: _i30.VehicleDashboard(
           key: args.key,
           vehicleRegNo: args.vehicleRegNo,
           orgEnrolld: args.orgEnrolld,
@@ -409,9 +427,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
                 vehicleRegNo: pathParams.getString('vehicleRegNo'),
                 orgEnrolld: pathParams.getString('custId'),
               ));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i29.VehicleFundLoadPage(
+        child: _i31.VehicleFundLoadPage(
           key: args.key,
           vehicleRegNo: args.vehicleRegNo,
           orgEnrolld: args.orgEnrolld,
@@ -423,9 +441,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<GpsDetailRouteArgs>(
           orElse: () => GpsDetailRouteArgs(
               vehicleRegNo: pathParams.getString('vehicleRegNo')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i30.GpsDetailPage(
+        child: _i32.GpsDetailPage(
           vehicleRegNo: args.vehicleRegNo,
           key: args.key,
         ),
@@ -434,18 +452,18 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
     ListVehiclesRoute.name: (routeData) {
       final args = routeData.argsAs<ListVehiclesRouteArgs>(
           orElse: () => const ListVehiclesRouteArgs());
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i31.ListVehiclesPage(
+        child: _i33.ListVehiclesPage(
           text: args.text,
           key: args.key,
         ),
       );
     },
     VehicleDetailedRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i32.VehicleDetailedScreen(),
+        child: const _i34.VehicleDetailedScreen(),
       );
     },
     SetVehicleFuelPreferenceRoute.name: (routeData) {
@@ -455,9 +473,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
                 orgEntityId: pathParams.getString('custId'),
                 vehicleRegNo: pathParams.getString('vehicleRegNo'),
               ));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i33.SetVehicleFuelPreferencePage(
+        child: _i35.SetVehicleFuelPreferencePage(
           key: args.key,
           orgEntityId: args.orgEntityId,
           vehicleRegNo: args.vehicleRegNo,
@@ -471,9 +489,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
                 vehicleRegNo: pathParams.getString('vehicleRegNo'),
                 orgEnrollId: pathParams.getString('custId'),
               ));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i34.VehicleManageFastag(
+        child: _i36.VehicleManageFastag(
           vehicleRegNo: args.vehicleRegNo,
           orgEnrollId: args.orgEnrollId,
           key: args.key,
@@ -485,9 +503,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<EnableVehicleServiceRouteArgs>(
           orElse: () => EnableVehicleServiceRouteArgs(
               vehicleId: pathParams.getString('vehicleRegNo')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i35.EnableVehicleServicePage(
+        child: _i37.EnableVehicleServicePage(
           key: args.key,
           vehicleId: args.vehicleId,
         ),
@@ -498,18 +516,18 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<LogisticsDetailedRouteArgs>(
           orElse: () => LogisticsDetailedRouteArgs(
               enrolId: pathParams.getString('custId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i36.LogisticsDetailedScreen(
+        child: _i38.LogisticsDetailedScreen(
           enrolId: args.enrolId,
           key: args.key,
         ),
       );
     },
     InviteLogisticsRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i37.InviteLogisticsPage(),
+        child: const _i39.InviteLogisticsPage(),
       );
     },
     SetLogisticsFuelPreferenceRoute.name: (routeData) {
@@ -517,9 +535,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<SetLogisticsFuelPreferenceRouteArgs>(
           orElse: () => SetLogisticsFuelPreferenceRouteArgs(
               orgEnrollId: pathParams.getString('custId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i38.SetLogisticsFuelPreferencePage(
+        child: _i40.SetLogisticsFuelPreferencePage(
           key: args.key,
           orgEnrollId: args.orgEnrollId,
         ),
@@ -530,9 +548,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<FundTransferRouteArgs>(
           orElse: () => FundTransferRouteArgs(
               orgEnrollId: pathParams.getString('custId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i39.FundTransferPage(
+        child: _i41.FundTransferPage(
           key: args.key,
           orgEnrollId: args.orgEnrollId,
         ),
@@ -543,9 +561,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<LogisticsOrganisationByEnrolmentIdArgs>(
           orElse: () => LogisticsOrganisationByEnrolmentIdArgs(
               enrolId: pathParams.getString('custId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i40.LogisticsOrganisationByEnrolmentId(
+        child: _i42.LogisticsOrganisationByEnrolmentId(
           enrolId: args.enrolId,
           key: args.key,
         ),
@@ -556,24 +574,24 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<VehicleWiseUsageRouteArgs>(
           orElse: () =>
               VehicleWiseUsageRouteArgs(orgId: pathParams.getString('custId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i41.VehicleWiseUsagePage(
+        child: _i43.VehicleWiseUsagePage(
           orgId: args.orgId,
           key: args.key,
         ),
       );
     },
     CompleteInvitedLogistics.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i42.CompleteInvitedLogistics(),
+        child: const _i44.CompleteInvitedLogistics(),
       );
     },
     CreateLogisticsRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i43.CreateLogisticsPage(),
+        child: const _i45.CreateLogisticsPage(),
       );
     },
     SetOrgPPIPreferenceRoute.name: (routeData) {
@@ -581,36 +599,36 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<SetOrgPPIPreferenceRouteArgs>(
           orElse: () => SetOrgPPIPreferenceRouteArgs(
               orgEnrolld: pathParams.getString('custId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i44.SetOrgPPIPreferencePage(
+        child: _i46.SetOrgPPIPreferencePage(
           key: args.key,
           orgEnrolld: args.orgEnrolld,
         ),
       );
     },
     ListLogisticsRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i45.ListLogisticsPage(),
+        child: const _i47.ListLogisticsPage(),
       );
     },
     AddAxleServiceRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i46.AddAxleServicePage(),
+        child: const _i48.AddAxleServicePage(),
       );
     },
     CreateInvoice.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i47.CreateInvoice(),
+        child: const _i49.CreateInvoice(),
       );
     },
     AccountActiveRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i48.AccountActiveRouter(),
+        child: const _i50.AccountActiveRouter(),
       );
     },
     AccountActivationRoute.name: (routeData) {
@@ -618,9 +636,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<AccountActivationRouteArgs>(
           orElse: () =>
               AccountActivationRouteArgs(token: pathParams.getString('token')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i49.AccountActivationPage(
+        child: _i51.AccountActivationPage(
           key: args.key,
           token: args.token,
         ),
@@ -629,9 +647,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
     LoginWithOtpForm.name: (routeData) {
       final args = routeData.argsAs<LoginWithOtpFormArgs>(
           orElse: () => const LoginWithOtpFormArgs());
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i50.LoginWithOtpForm(
+        child: _i52.LoginWithOtpForm(
           key: args.key,
           isScrollable: args.isScrollable,
           isProfilePage: args.isProfilePage,
@@ -644,36 +662,36 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
     AuthBackground.name: (routeData) {
       final args = routeData.argsAs<AuthBackgroundArgs>(
           orElse: () => const AuthBackgroundArgs());
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i51.AuthBackground(
+        child: _i53.AuthBackground(
           key: args.key,
           screenForm: args.screenForm,
         ),
       );
     },
     AxleStaffsRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i52.AxleStaffsRouter(),
+        child: const _i54.AxleStaffsRouter(),
       );
     },
     AxleVehiclesRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i53.AxleVehiclesRouter(),
+        child: const _i55.AxleVehiclesRouter(),
       );
     },
     AxleAutoRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i54.AxleAutoRouter(),
+        child: const _i56.AxleAutoRouter(),
       );
     },
     AxleCustomersRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i55.AxleCustomersRouter(),
+        child: const _i57.AxleCustomersRouter(),
       );
     },
     SelectedVehicle.name: (routeData) {
@@ -681,18 +699,18 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<SelectedVehicleArgs>(
           orElse: () => SelectedVehicleArgs(
               vehicleRegNo: pathParams.getString('vehicleRegNo')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i56.SelectedVehicle(
+        child: _i58.SelectedVehicle(
           vehicleRegNo: args.vehicleRegNo,
           key: args.key,
         ),
       );
     },
     VehicleRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i57.VehicleRouter(),
+        child: const _i59.VehicleRouter(),
       );
     },
     SelectedStaffRoute.name: (routeData) {
@@ -700,24 +718,24 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<SelectedStaffRouteArgs>(
           orElse: () => SelectedStaffRouteArgs(
               userEnrolmentId: pathParams.getString('staffEnrolId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i58.SelectedStaffScreen(
+        child: _i60.SelectedStaffScreen(
           userEnrolmentId: args.userEnrolmentId,
           key: args.key,
         ),
       );
     },
     StaffRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i59.StaffRouter(),
+        child: const _i61.StaffRouter(),
       );
     },
     AxlePartnersRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i60.AxlePartnersRouter(),
+        child: const _i62.AxlePartnersRouter(),
       );
     },
     SelectedOrgRoute.name: (routeData) {
@@ -725,9 +743,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<SelectedOrgRouteArgs>(
           orElse: () =>
               SelectedOrgRouteArgs(selOrg: pathParams.getString('selOrg')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i61.SelectedOrgScreen(
+        child: _i63.SelectedOrgScreen(
           selOrg: args.selOrg,
           key: args.key,
         ),
@@ -738,24 +756,24 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<OrgDashboardRouteArgs>(
           orElse: () =>
               OrgDashboardRouteArgs(selOrgId: pathParams.getString('selOrg')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i62.OrgDashboardScreen(
+        child: _i64.OrgDashboardScreen(
           selOrgId: args.selOrgId,
           key: args.key,
         ),
       );
     },
     AxlePartnerCommissionRouter.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i63.AxlePartnerCommissionRouter(),
+        child: const _i65.AxlePartnerCommissionRouter(),
       );
     },
     UserNotFoundRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i64.UserNotFoundScreen(),
+        child: const _i66.UserNotFoundScreen(),
       );
     },
     SelectedPartnerRoute.name: (routeData) {
@@ -763,9 +781,9 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<SelectedPartnerRouteArgs>(
           orElse: () => SelectedPartnerRouteArgs(
               partnerId: pathParams.getString('partnerId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i65.SelectedPartnerScreen(
+        child: _i67.SelectedPartnerScreen(
           partnerId: args.partnerId,
           key: args.key,
         ),
@@ -776,36 +794,42 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
       final args = routeData.argsAs<SelectedCustomerRouteArgs>(
           orElse: () => SelectedCustomerRouteArgs(
               custId: pathParams.getString('custId')));
-      return _i71.AutoRoutePage<dynamic>(
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i66.SelectedCustomerScreen(
+        child: _i68.SelectedCustomerScreen(
           custId: args.custId,
           key: args.key,
         ),
       );
     },
-    PanRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+    EcardVerificationDashboard.name: (routeData) {
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i67.PanScreen(),
+        child: const _i69.EcardVerificationDashboard(),
       );
     },
-    AadhaarRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+    SearchDashboardHome.name: (routeData) {
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i68.AadhaarScreen(),
+        child: const _i70.SearchDashboardHome(),
       );
     },
-    DrivingLicenseRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+    RcDetailRoute.name: (routeData) {
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i69.DrivingLicenseScreen(),
+        child: const _i71.RcDetailScreen(),
       );
     },
-    CibilRoute.name: (routeData) {
-      return _i71.AutoRoutePage<dynamic>(
+    RcRoute.name: (routeData) {
+      return _i74.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i70.CibilScreen(),
+        child: const _i72.RcScreen(),
+      );
+    },
+    RcHistoryRoute.name: (routeData) {
+      return _i74.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i73.RcHistoryScreen(),
       );
     },
   };
@@ -813,11 +837,11 @@ abstract class $AppNewRouter extends _i71.RootStackRouter {
 
 /// generated route for
 /// [_i1.PaymentsPage]
-class PaymentsRoute extends _i71.PageRouteInfo<PaymentsRouteArgs> {
+class PaymentsRoute extends _i74.PageRouteInfo<PaymentsRouteArgs> {
   PaymentsRoute({
-    _i72.Key? key,
+    _i75.Key? key,
     required String enrolId,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           PaymentsRoute.name,
           args: PaymentsRouteArgs(
@@ -830,8 +854,8 @@ class PaymentsRoute extends _i71.PageRouteInfo<PaymentsRouteArgs> {
 
   static const String name = 'PaymentsRoute';
 
-  static const _i71.PageInfo<PaymentsRouteArgs> page =
-      _i71.PageInfo<PaymentsRouteArgs>(name);
+  static const _i74.PageInfo<PaymentsRouteArgs> page =
+      _i74.PageInfo<PaymentsRouteArgs>(name);
 }
 
 class PaymentsRouteArgs {
@@ -840,7 +864,7 @@ class PaymentsRouteArgs {
     required this.enrolId,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String enrolId;
 
@@ -852,8 +876,8 @@ class PaymentsRouteArgs {
 
 /// generated route for
 /// [_i2.AxlePaymentRouter]
-class AxlePaymentRouter extends _i71.PageRouteInfo<void> {
-  const AxlePaymentRouter({List<_i71.PageRouteInfo>? children})
+class AxlePaymentRouter extends _i74.PageRouteInfo<void> {
+  const AxlePaymentRouter({List<_i74.PageRouteInfo>? children})
       : super(
           AxlePaymentRouter.name,
           initialChildren: children,
@@ -861,16 +885,16 @@ class AxlePaymentRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AxlePaymentRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.CreatePaymentPage]
-class CreatePaymentRoute extends _i71.PageRouteInfo<CreatePaymentRouteArgs> {
+class CreatePaymentRoute extends _i74.PageRouteInfo<CreatePaymentRouteArgs> {
   CreatePaymentRoute({
     required String orgEnrollId,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           CreatePaymentRoute.name,
           args: CreatePaymentRouteArgs(
@@ -883,8 +907,8 @@ class CreatePaymentRoute extends _i71.PageRouteInfo<CreatePaymentRouteArgs> {
 
   static const String name = 'CreatePaymentRoute';
 
-  static const _i71.PageInfo<CreatePaymentRouteArgs> page =
-      _i71.PageInfo<CreatePaymentRouteArgs>(name);
+  static const _i74.PageInfo<CreatePaymentRouteArgs> page =
+      _i74.PageInfo<CreatePaymentRouteArgs>(name);
 }
 
 class CreatePaymentRouteArgs {
@@ -895,7 +919,7 @@ class CreatePaymentRouteArgs {
 
   final String orgEnrollId;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -905,8 +929,8 @@ class CreatePaymentRouteArgs {
 
 /// generated route for
 /// [_i4.AddGpsDevices]
-class AddGpsDevices extends _i71.PageRouteInfo<void> {
-  const AddGpsDevices({List<_i71.PageRouteInfo>? children})
+class AddGpsDevices extends _i74.PageRouteInfo<void> {
+  const AddGpsDevices({List<_i74.PageRouteInfo>? children})
       : super(
           AddGpsDevices.name,
           initialChildren: children,
@@ -914,13 +938,13 @@ class AddGpsDevices extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AddGpsDevices';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i5.AxleGpsRouter]
-class AxleGpsRouter extends _i71.PageRouteInfo<void> {
-  const AxleGpsRouter({List<_i71.PageRouteInfo>? children})
+class AxleGpsRouter extends _i74.PageRouteInfo<void> {
+  const AxleGpsRouter({List<_i74.PageRouteInfo>? children})
       : super(
           AxleGpsRouter.name,
           initialChildren: children,
@@ -928,13 +952,13 @@ class AxleGpsRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AxleGpsRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i6.ListGpsDevices]
-class ListGpsDevices extends _i71.PageRouteInfo<void> {
-  const ListGpsDevices({List<_i71.PageRouteInfo>? children})
+class ListGpsDevices extends _i74.PageRouteInfo<void> {
+  const ListGpsDevices({List<_i74.PageRouteInfo>? children})
       : super(
           ListGpsDevices.name,
           initialChildren: children,
@@ -942,13 +966,13 @@ class ListGpsDevices extends _i71.PageRouteInfo<void> {
 
   static const String name = 'ListGpsDevices';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i7.ECardVerificationRouter]
-class ECardVerificationRouter extends _i71.PageRouteInfo<void> {
-  const ECardVerificationRouter({List<_i71.PageRouteInfo>? children})
+class ECardVerificationRouter extends _i74.PageRouteInfo<void> {
+  const ECardVerificationRouter({List<_i74.PageRouteInfo>? children})
       : super(
           ECardVerificationRouter.name,
           initialChildren: children,
@@ -956,13 +980,41 @@ class ECardVerificationRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'ECardVerificationRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i8.ChallanScreen]
-class ChallanRoute extends _i71.PageRouteInfo<void> {
-  const ChallanRoute({List<_i71.PageRouteInfo>? children})
+/// [_i8.PanScreen]
+class PanRoute extends _i74.PageRouteInfo<void> {
+  const PanRoute({List<_i74.PageRouteInfo>? children})
+      : super(
+          PanRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PanRoute';
+
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i9.CibilScreen]
+class CibilRoute extends _i74.PageRouteInfo<void> {
+  const CibilRoute({List<_i74.PageRouteInfo>? children})
+      : super(
+          CibilRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CibilRoute';
+
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i10.ChallanScreen]
+class ChallanRoute extends _i74.PageRouteInfo<void> {
+  const ChallanRoute({List<_i74.PageRouteInfo>? children})
       : super(
           ChallanRoute.name,
           initialChildren: children,
@@ -970,45 +1022,45 @@ class ChallanRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'ChallanRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i9.EcardVerificationDashboard]
-class EcardVerificationDashboard extends _i71.PageRouteInfo<void> {
-  const EcardVerificationDashboard({List<_i71.PageRouteInfo>? children})
+/// [_i11.DrivingLicenseScreen]
+class DrivingLicenseRoute extends _i74.PageRouteInfo<void> {
+  const DrivingLicenseRoute({List<_i74.PageRouteInfo>? children})
       : super(
-          EcardVerificationDashboard.name,
+          DrivingLicenseRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'EcardVerificationDashboard';
+  static const String name = 'DrivingLicenseRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i10.RcDetailScreen]
-class RcDetailRoute extends _i71.PageRouteInfo<void> {
-  const RcDetailRoute({List<_i71.PageRouteInfo>? children})
+/// [_i12.AadhaarScreen]
+class AadhaarRoute extends _i74.PageRouteInfo<void> {
+  const AadhaarRoute({List<_i74.PageRouteInfo>? children})
       : super(
-          RcDetailRoute.name,
+          AadhaarRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'RcDetailRoute';
+  static const String name = 'AadhaarRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i11.AddUserService]
-class AddUserService extends _i71.PageRouteInfo<AddUserServiceArgs> {
+/// [_i13.AddUserService]
+class AddUserService extends _i74.PageRouteInfo<AddUserServiceArgs> {
   AddUserService({
-    _i72.Key? key,
+    _i75.Key? key,
     required String userEnrollmentId,
     required String orgenrollIdOfUser,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           AddUserService.name,
           args: AddUserServiceArgs(
@@ -1025,8 +1077,8 @@ class AddUserService extends _i71.PageRouteInfo<AddUserServiceArgs> {
 
   static const String name = 'AddUserService';
 
-  static const _i71.PageInfo<AddUserServiceArgs> page =
-      _i71.PageInfo<AddUserServiceArgs>(name);
+  static const _i74.PageInfo<AddUserServiceArgs> page =
+      _i74.PageInfo<AddUserServiceArgs>(name);
 }
 
 class AddUserServiceArgs {
@@ -1036,7 +1088,7 @@ class AddUserServiceArgs {
     required this.orgenrollIdOfUser,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String userEnrollmentId;
 
@@ -1049,12 +1101,12 @@ class AddUserServiceArgs {
 }
 
 /// generated route for
-/// [_i12.ListUsersPage]
-class ListUsersRoute extends _i71.PageRouteInfo<ListUsersRouteArgs> {
+/// [_i14.ListUsersPage]
+class ListUsersRoute extends _i74.PageRouteInfo<ListUsersRouteArgs> {
   ListUsersRoute({
-    _i72.Key? key,
+    _i75.Key? key,
     String? userRole,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           ListUsersRoute.name,
           args: ListUsersRouteArgs(
@@ -1066,8 +1118,8 @@ class ListUsersRoute extends _i71.PageRouteInfo<ListUsersRouteArgs> {
 
   static const String name = 'ListUsersRoute';
 
-  static const _i71.PageInfo<ListUsersRouteArgs> page =
-      _i71.PageInfo<ListUsersRouteArgs>(name);
+  static const _i74.PageInfo<ListUsersRouteArgs> page =
+      _i74.PageInfo<ListUsersRouteArgs>(name);
 }
 
 class ListUsersRouteArgs {
@@ -1076,7 +1128,7 @@ class ListUsersRouteArgs {
     this.userRole,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String? userRole;
 
@@ -1087,14 +1139,14 @@ class ListUsersRouteArgs {
 }
 
 /// generated route for
-/// [_i13.UserChildDashboard]
-class UserChildDashboard extends _i71.PageRouteInfo<UserChildDashboardArgs> {
+/// [_i15.UserChildDashboard]
+class UserChildDashboard extends _i74.PageRouteInfo<UserChildDashboardArgs> {
   UserChildDashboard({
-    _i72.Key? key,
+    _i75.Key? key,
     bool isDash = false,
     required String userEnrollmentId,
     required String orgenrollIdOfUser,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           UserChildDashboard.name,
           args: UserChildDashboardArgs(
@@ -1112,8 +1164,8 @@ class UserChildDashboard extends _i71.PageRouteInfo<UserChildDashboardArgs> {
 
   static const String name = 'UserChildDashboard';
 
-  static const _i71.PageInfo<UserChildDashboardArgs> page =
-      _i71.PageInfo<UserChildDashboardArgs>(name);
+  static const _i74.PageInfo<UserChildDashboardArgs> page =
+      _i74.PageInfo<UserChildDashboardArgs>(name);
 }
 
 class UserChildDashboardArgs {
@@ -1124,7 +1176,7 @@ class UserChildDashboardArgs {
     required this.orgenrollIdOfUser,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final bool isDash;
 
@@ -1139,13 +1191,13 @@ class UserChildDashboardArgs {
 }
 
 /// generated route for
-/// [_i14.ManageCardPage]
-class ManageCardRoute extends _i71.PageRouteInfo<ManageCardRouteArgs> {
+/// [_i16.ManageCardPage]
+class ManageCardRoute extends _i74.PageRouteInfo<ManageCardRouteArgs> {
   ManageCardRoute({
-    _i72.Key? key,
+    _i75.Key? key,
     required String userOrgId,
     required String userEnrolmentId,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           ManageCardRoute.name,
           args: ManageCardRouteArgs(
@@ -1162,8 +1214,8 @@ class ManageCardRoute extends _i71.PageRouteInfo<ManageCardRouteArgs> {
 
   static const String name = 'ManageCardRoute';
 
-  static const _i71.PageInfo<ManageCardRouteArgs> page =
-      _i71.PageInfo<ManageCardRouteArgs>(name);
+  static const _i74.PageInfo<ManageCardRouteArgs> page =
+      _i74.PageInfo<ManageCardRouteArgs>(name);
 }
 
 class ManageCardRouteArgs {
@@ -1173,7 +1225,7 @@ class ManageCardRouteArgs {
     required this.userEnrolmentId,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String userOrgId;
 
@@ -1186,9 +1238,9 @@ class ManageCardRouteArgs {
 }
 
 /// generated route for
-/// [_i15.CreateUserPage]
-class CreateUserRoute extends _i71.PageRouteInfo<void> {
-  const CreateUserRoute({List<_i71.PageRouteInfo>? children})
+/// [_i17.CreateUserPage]
+class CreateUserRoute extends _i74.PageRouteInfo<void> {
+  const CreateUserRoute({List<_i74.PageRouteInfo>? children})
       : super(
           CreateUserRoute.name,
           initialChildren: children,
@@ -1196,13 +1248,13 @@ class CreateUserRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'CreateUserRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i16.CommissionHistoryPage]
-class CommissionHistoryRoute extends _i71.PageRouteInfo<void> {
-  const CommissionHistoryRoute({List<_i71.PageRouteInfo>? children})
+/// [_i18.CommissionHistoryPage]
+class CommissionHistoryRoute extends _i74.PageRouteInfo<void> {
+  const CommissionHistoryRoute({List<_i74.PageRouteInfo>? children})
       : super(
           CommissionHistoryRoute.name,
           initialChildren: children,
@@ -1210,13 +1262,13 @@ class CommissionHistoryRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'CommissionHistoryRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i17.ListPartnerPage]
-class ListPartnerRoute extends _i71.PageRouteInfo<void> {
-  const ListPartnerRoute({List<_i71.PageRouteInfo>? children})
+/// [_i19.ListPartnerPage]
+class ListPartnerRoute extends _i74.PageRouteInfo<void> {
+  const ListPartnerRoute({List<_i74.PageRouteInfo>? children})
       : super(
           ListPartnerRoute.name,
           initialChildren: children,
@@ -1224,17 +1276,17 @@ class ListPartnerRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'ListPartnerRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i18.PartnerDashboard]
-class PartnerDashboard extends _i71.PageRouteInfo<PartnerDashboardArgs> {
+/// [_i20.PartnerDashboard]
+class PartnerDashboard extends _i74.PageRouteInfo<PartnerDashboardArgs> {
   PartnerDashboard({
-    _i72.Key? key,
+    _i75.Key? key,
     required String orgId,
     String? orgType,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           PartnerDashboard.name,
           args: PartnerDashboardArgs(
@@ -1248,8 +1300,8 @@ class PartnerDashboard extends _i71.PageRouteInfo<PartnerDashboardArgs> {
 
   static const String name = 'PartnerDashboard';
 
-  static const _i71.PageInfo<PartnerDashboardArgs> page =
-      _i71.PageInfo<PartnerDashboardArgs>(name);
+  static const _i74.PageInfo<PartnerDashboardArgs> page =
+      _i74.PageInfo<PartnerDashboardArgs>(name);
 }
 
 class PartnerDashboardArgs {
@@ -1259,7 +1311,7 @@ class PartnerDashboardArgs {
     this.orgType,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String orgId;
 
@@ -1272,9 +1324,9 @@ class PartnerDashboardArgs {
 }
 
 /// generated route for
-/// [_i19.CreatePartnerPage]
-class CreatePartnerRoute extends _i71.PageRouteInfo<void> {
-  const CreatePartnerRoute({List<_i71.PageRouteInfo>? children})
+/// [_i21.CreatePartnerPage]
+class CreatePartnerRoute extends _i74.PageRouteInfo<void> {
+  const CreatePartnerRoute({List<_i74.PageRouteInfo>? children})
       : super(
           CreatePartnerRoute.name,
           initialChildren: children,
@@ -1282,16 +1334,16 @@ class CreatePartnerRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'CreatePartnerRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i20.AxleView]
-class AxleScaffold extends _i71.PageRouteInfo<AxleScaffoldArgs> {
+/// [_i22.AxleView]
+class AxleScaffold extends _i74.PageRouteInfo<AxleScaffoldArgs> {
   AxleScaffold({
-    _i72.Key? key,
+    _i75.Key? key,
     String appBarTitle = '',
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           AxleScaffold.name,
           args: AxleScaffoldArgs(
@@ -1303,8 +1355,8 @@ class AxleScaffold extends _i71.PageRouteInfo<AxleScaffoldArgs> {
 
   static const String name = 'AxleScaffold';
 
-  static const _i71.PageInfo<AxleScaffoldArgs> page =
-      _i71.PageInfo<AxleScaffoldArgs>(name);
+  static const _i74.PageInfo<AxleScaffoldArgs> page =
+      _i74.PageInfo<AxleScaffoldArgs>(name);
 }
 
 class AxleScaffoldArgs {
@@ -1313,7 +1365,7 @@ class AxleScaffoldArgs {
     this.appBarTitle = '',
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String appBarTitle;
 
@@ -1324,9 +1376,9 @@ class AxleScaffoldArgs {
 }
 
 /// generated route for
-/// [_i21.SelectOrgnaizationPage]
-class SelectOrgnaizationRoute extends _i71.PageRouteInfo<void> {
-  const SelectOrgnaizationRoute({List<_i71.PageRouteInfo>? children})
+/// [_i23.SelectOrgnaizationPage]
+class SelectOrgnaizationRoute extends _i74.PageRouteInfo<void> {
+  const SelectOrgnaizationRoute({List<_i74.PageRouteInfo>? children})
       : super(
           SelectOrgnaizationRoute.name,
           initialChildren: children,
@@ -1334,13 +1386,13 @@ class SelectOrgnaizationRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'SelectOrgnaizationRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i22.TransactionHistoryPage]
-class TransactionHistoryRoute extends _i71.PageRouteInfo<void> {
-  const TransactionHistoryRoute({List<_i71.PageRouteInfo>? children})
+/// [_i24.TransactionHistoryPage]
+class TransactionHistoryRoute extends _i74.PageRouteInfo<void> {
+  const TransactionHistoryRoute({List<_i74.PageRouteInfo>? children})
       : super(
           TransactionHistoryRoute.name,
           initialChildren: children,
@@ -1348,13 +1400,13 @@ class TransactionHistoryRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'TransactionHistoryRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i23.StaticDashbaord]
-class StaticDashbaord extends _i71.PageRouteInfo<void> {
-  const StaticDashbaord({List<_i71.PageRouteInfo>? children})
+/// [_i25.StaticDashbaord]
+class StaticDashbaord extends _i74.PageRouteInfo<void> {
+  const StaticDashbaord({List<_i74.PageRouteInfo>? children})
       : super(
           StaticDashbaord.name,
           initialChildren: children,
@@ -1362,13 +1414,13 @@ class StaticDashbaord extends _i71.PageRouteInfo<void> {
 
   static const String name = 'StaticDashbaord';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i24.ProfilePage]
-class ProfileRoute extends _i71.PageRouteInfo<void> {
-  const ProfileRoute({List<_i71.PageRouteInfo>? children})
+/// [_i26.ProfilePage]
+class ProfileRoute extends _i74.PageRouteInfo<void> {
+  const ProfileRoute({List<_i74.PageRouteInfo>? children})
       : super(
           ProfileRoute.name,
           initialChildren: children,
@@ -1376,13 +1428,13 @@ class ProfileRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'ProfileRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i25.ErrorDashbaord]
-class ErrorDashbaord extends _i71.PageRouteInfo<void> {
-  const ErrorDashbaord({List<_i71.PageRouteInfo>? children})
+/// [_i27.ErrorDashbaord]
+class ErrorDashbaord extends _i74.PageRouteInfo<void> {
+  const ErrorDashbaord({List<_i74.PageRouteInfo>? children})
       : super(
           ErrorDashbaord.name,
           initialChildren: children,
@@ -1390,17 +1442,17 @@ class ErrorDashbaord extends _i71.PageRouteInfo<void> {
 
   static const String name = 'ErrorDashbaord';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i26.ListVehicleByCustomer]
+/// [_i28.ListVehicleByCustomer]
 class ListVehicleByCustomer
-    extends _i71.PageRouteInfo<ListVehicleByCustomerArgs> {
+    extends _i74.PageRouteInfo<ListVehicleByCustomerArgs> {
   ListVehicleByCustomer({
     required String custId,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           ListVehicleByCustomer.name,
           args: ListVehicleByCustomerArgs(
@@ -1413,8 +1465,8 @@ class ListVehicleByCustomer
 
   static const String name = 'ListVehicleByCustomer';
 
-  static const _i71.PageInfo<ListVehicleByCustomerArgs> page =
-      _i71.PageInfo<ListVehicleByCustomerArgs>(name);
+  static const _i74.PageInfo<ListVehicleByCustomerArgs> page =
+      _i74.PageInfo<ListVehicleByCustomerArgs>(name);
 }
 
 class ListVehicleByCustomerArgs {
@@ -1425,7 +1477,7 @@ class ListVehicleByCustomerArgs {
 
   final String custId;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -1434,9 +1486,9 @@ class ListVehicleByCustomerArgs {
 }
 
 /// generated route for
-/// [_i27.CreateVehiclePage]
-class CreateVehicleRoute extends _i71.PageRouteInfo<void> {
-  const CreateVehicleRoute({List<_i71.PageRouteInfo>? children})
+/// [_i29.CreateVehiclePage]
+class CreateVehicleRoute extends _i74.PageRouteInfo<void> {
+  const CreateVehicleRoute({List<_i74.PageRouteInfo>? children})
       : super(
           CreateVehicleRoute.name,
           initialChildren: children,
@@ -1444,17 +1496,17 @@ class CreateVehicleRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'CreateVehicleRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i28.VehicleDashboard]
-class VehicleDashboard extends _i71.PageRouteInfo<VehicleDashboardArgs> {
+/// [_i30.VehicleDashboard]
+class VehicleDashboard extends _i74.PageRouteInfo<VehicleDashboardArgs> {
   VehicleDashboard({
-    _i72.Key? key,
+    _i75.Key? key,
     required String vehicleRegNo,
     required String orgEnrolld,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           VehicleDashboard.name,
           args: VehicleDashboardArgs(
@@ -1471,8 +1523,8 @@ class VehicleDashboard extends _i71.PageRouteInfo<VehicleDashboardArgs> {
 
   static const String name = 'VehicleDashboard';
 
-  static const _i71.PageInfo<VehicleDashboardArgs> page =
-      _i71.PageInfo<VehicleDashboardArgs>(name);
+  static const _i74.PageInfo<VehicleDashboardArgs> page =
+      _i74.PageInfo<VehicleDashboardArgs>(name);
 }
 
 class VehicleDashboardArgs {
@@ -1482,7 +1534,7 @@ class VehicleDashboardArgs {
     required this.orgEnrolld,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String vehicleRegNo;
 
@@ -1495,14 +1547,14 @@ class VehicleDashboardArgs {
 }
 
 /// generated route for
-/// [_i29.VehicleFundLoadPage]
+/// [_i31.VehicleFundLoadPage]
 class VehicleFundLoadRoute
-    extends _i71.PageRouteInfo<VehicleFundLoadRouteArgs> {
+    extends _i74.PageRouteInfo<VehicleFundLoadRouteArgs> {
   VehicleFundLoadRoute({
-    _i72.Key? key,
+    _i75.Key? key,
     required String vehicleRegNo,
     required String orgEnrolld,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           VehicleFundLoadRoute.name,
           args: VehicleFundLoadRouteArgs(
@@ -1519,8 +1571,8 @@ class VehicleFundLoadRoute
 
   static const String name = 'VehicleFundLoadRoute';
 
-  static const _i71.PageInfo<VehicleFundLoadRouteArgs> page =
-      _i71.PageInfo<VehicleFundLoadRouteArgs>(name);
+  static const _i74.PageInfo<VehicleFundLoadRouteArgs> page =
+      _i74.PageInfo<VehicleFundLoadRouteArgs>(name);
 }
 
 class VehicleFundLoadRouteArgs {
@@ -1530,7 +1582,7 @@ class VehicleFundLoadRouteArgs {
     required this.orgEnrolld,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String vehicleRegNo;
 
@@ -1543,12 +1595,12 @@ class VehicleFundLoadRouteArgs {
 }
 
 /// generated route for
-/// [_i30.GpsDetailPage]
-class GpsDetailRoute extends _i71.PageRouteInfo<GpsDetailRouteArgs> {
+/// [_i32.GpsDetailPage]
+class GpsDetailRoute extends _i74.PageRouteInfo<GpsDetailRouteArgs> {
   GpsDetailRoute({
     required String vehicleRegNo,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           GpsDetailRoute.name,
           args: GpsDetailRouteArgs(
@@ -1561,8 +1613,8 @@ class GpsDetailRoute extends _i71.PageRouteInfo<GpsDetailRouteArgs> {
 
   static const String name = 'GpsDetailRoute';
 
-  static const _i71.PageInfo<GpsDetailRouteArgs> page =
-      _i71.PageInfo<GpsDetailRouteArgs>(name);
+  static const _i74.PageInfo<GpsDetailRouteArgs> page =
+      _i74.PageInfo<GpsDetailRouteArgs>(name);
 }
 
 class GpsDetailRouteArgs {
@@ -1573,7 +1625,7 @@ class GpsDetailRouteArgs {
 
   final String vehicleRegNo;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -1582,12 +1634,12 @@ class GpsDetailRouteArgs {
 }
 
 /// generated route for
-/// [_i31.ListVehiclesPage]
-class ListVehiclesRoute extends _i71.PageRouteInfo<ListVehiclesRouteArgs> {
+/// [_i33.ListVehiclesPage]
+class ListVehiclesRoute extends _i74.PageRouteInfo<ListVehiclesRouteArgs> {
   ListVehiclesRoute({
     String? text,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           ListVehiclesRoute.name,
           args: ListVehiclesRouteArgs(
@@ -1599,8 +1651,8 @@ class ListVehiclesRoute extends _i71.PageRouteInfo<ListVehiclesRouteArgs> {
 
   static const String name = 'ListVehiclesRoute';
 
-  static const _i71.PageInfo<ListVehiclesRouteArgs> page =
-      _i71.PageInfo<ListVehiclesRouteArgs>(name);
+  static const _i74.PageInfo<ListVehiclesRouteArgs> page =
+      _i74.PageInfo<ListVehiclesRouteArgs>(name);
 }
 
 class ListVehiclesRouteArgs {
@@ -1611,7 +1663,7 @@ class ListVehiclesRouteArgs {
 
   final String? text;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -1620,9 +1672,9 @@ class ListVehiclesRouteArgs {
 }
 
 /// generated route for
-/// [_i32.VehicleDetailedScreen]
-class VehicleDetailedRoute extends _i71.PageRouteInfo<void> {
-  const VehicleDetailedRoute({List<_i71.PageRouteInfo>? children})
+/// [_i34.VehicleDetailedScreen]
+class VehicleDetailedRoute extends _i74.PageRouteInfo<void> {
+  const VehicleDetailedRoute({List<_i74.PageRouteInfo>? children})
       : super(
           VehicleDetailedRoute.name,
           initialChildren: children,
@@ -1630,18 +1682,18 @@ class VehicleDetailedRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'VehicleDetailedRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i33.SetVehicleFuelPreferencePage]
+/// [_i35.SetVehicleFuelPreferencePage]
 class SetVehicleFuelPreferenceRoute
-    extends _i71.PageRouteInfo<SetVehicleFuelPreferenceRouteArgs> {
+    extends _i74.PageRouteInfo<SetVehicleFuelPreferenceRouteArgs> {
   SetVehicleFuelPreferenceRoute({
-    _i72.Key? key,
+    _i75.Key? key,
     required String orgEntityId,
     required String vehicleRegNo,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           SetVehicleFuelPreferenceRoute.name,
           args: SetVehicleFuelPreferenceRouteArgs(
@@ -1658,8 +1710,8 @@ class SetVehicleFuelPreferenceRoute
 
   static const String name = 'SetVehicleFuelPreferenceRoute';
 
-  static const _i71.PageInfo<SetVehicleFuelPreferenceRouteArgs> page =
-      _i71.PageInfo<SetVehicleFuelPreferenceRouteArgs>(name);
+  static const _i74.PageInfo<SetVehicleFuelPreferenceRouteArgs> page =
+      _i74.PageInfo<SetVehicleFuelPreferenceRouteArgs>(name);
 }
 
 class SetVehicleFuelPreferenceRouteArgs {
@@ -1669,7 +1721,7 @@ class SetVehicleFuelPreferenceRouteArgs {
     required this.vehicleRegNo,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String orgEntityId;
 
@@ -1682,13 +1734,13 @@ class SetVehicleFuelPreferenceRouteArgs {
 }
 
 /// generated route for
-/// [_i34.VehicleManageFastag]
-class VehicleManageFastag extends _i71.PageRouteInfo<VehicleManageFastagArgs> {
+/// [_i36.VehicleManageFastag]
+class VehicleManageFastag extends _i74.PageRouteInfo<VehicleManageFastagArgs> {
   VehicleManageFastag({
     required String vehicleRegNo,
     required String orgEnrollId,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           VehicleManageFastag.name,
           args: VehicleManageFastagArgs(
@@ -1705,8 +1757,8 @@ class VehicleManageFastag extends _i71.PageRouteInfo<VehicleManageFastagArgs> {
 
   static const String name = 'VehicleManageFastag';
 
-  static const _i71.PageInfo<VehicleManageFastagArgs> page =
-      _i71.PageInfo<VehicleManageFastagArgs>(name);
+  static const _i74.PageInfo<VehicleManageFastagArgs> page =
+      _i74.PageInfo<VehicleManageFastagArgs>(name);
 }
 
 class VehicleManageFastagArgs {
@@ -1720,7 +1772,7 @@ class VehicleManageFastagArgs {
 
   final String orgEnrollId;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -1729,13 +1781,13 @@ class VehicleManageFastagArgs {
 }
 
 /// generated route for
-/// [_i35.EnableVehicleServicePage]
+/// [_i37.EnableVehicleServicePage]
 class EnableVehicleServiceRoute
-    extends _i71.PageRouteInfo<EnableVehicleServiceRouteArgs> {
+    extends _i74.PageRouteInfo<EnableVehicleServiceRouteArgs> {
   EnableVehicleServiceRoute({
-    _i72.Key? key,
+    _i75.Key? key,
     required String vehicleId,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           EnableVehicleServiceRoute.name,
           args: EnableVehicleServiceRouteArgs(
@@ -1748,8 +1800,8 @@ class EnableVehicleServiceRoute
 
   static const String name = 'EnableVehicleServiceRoute';
 
-  static const _i71.PageInfo<EnableVehicleServiceRouteArgs> page =
-      _i71.PageInfo<EnableVehicleServiceRouteArgs>(name);
+  static const _i74.PageInfo<EnableVehicleServiceRouteArgs> page =
+      _i74.PageInfo<EnableVehicleServiceRouteArgs>(name);
 }
 
 class EnableVehicleServiceRouteArgs {
@@ -1758,7 +1810,7 @@ class EnableVehicleServiceRouteArgs {
     required this.vehicleId,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String vehicleId;
 
@@ -1769,13 +1821,13 @@ class EnableVehicleServiceRouteArgs {
 }
 
 /// generated route for
-/// [_i36.LogisticsDetailedScreen]
+/// [_i38.LogisticsDetailedScreen]
 class LogisticsDetailedRoute
-    extends _i71.PageRouteInfo<LogisticsDetailedRouteArgs> {
+    extends _i74.PageRouteInfo<LogisticsDetailedRouteArgs> {
   LogisticsDetailedRoute({
     required String enrolId,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           LogisticsDetailedRoute.name,
           args: LogisticsDetailedRouteArgs(
@@ -1788,8 +1840,8 @@ class LogisticsDetailedRoute
 
   static const String name = 'LogisticsDetailedRoute';
 
-  static const _i71.PageInfo<LogisticsDetailedRouteArgs> page =
-      _i71.PageInfo<LogisticsDetailedRouteArgs>(name);
+  static const _i74.PageInfo<LogisticsDetailedRouteArgs> page =
+      _i74.PageInfo<LogisticsDetailedRouteArgs>(name);
 }
 
 class LogisticsDetailedRouteArgs {
@@ -1800,7 +1852,7 @@ class LogisticsDetailedRouteArgs {
 
   final String enrolId;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -1809,9 +1861,9 @@ class LogisticsDetailedRouteArgs {
 }
 
 /// generated route for
-/// [_i37.InviteLogisticsPage]
-class InviteLogisticsRoute extends _i71.PageRouteInfo<void> {
-  const InviteLogisticsRoute({List<_i71.PageRouteInfo>? children})
+/// [_i39.InviteLogisticsPage]
+class InviteLogisticsRoute extends _i74.PageRouteInfo<void> {
+  const InviteLogisticsRoute({List<_i74.PageRouteInfo>? children})
       : super(
           InviteLogisticsRoute.name,
           initialChildren: children,
@@ -1819,17 +1871,17 @@ class InviteLogisticsRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'InviteLogisticsRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i38.SetLogisticsFuelPreferencePage]
+/// [_i40.SetLogisticsFuelPreferencePage]
 class SetLogisticsFuelPreferenceRoute
-    extends _i71.PageRouteInfo<SetLogisticsFuelPreferenceRouteArgs> {
+    extends _i74.PageRouteInfo<SetLogisticsFuelPreferenceRouteArgs> {
   SetLogisticsFuelPreferenceRoute({
-    _i72.Key? key,
+    _i75.Key? key,
     required String orgEnrollId,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           SetLogisticsFuelPreferenceRoute.name,
           args: SetLogisticsFuelPreferenceRouteArgs(
@@ -1842,8 +1894,8 @@ class SetLogisticsFuelPreferenceRoute
 
   static const String name = 'SetLogisticsFuelPreferenceRoute';
 
-  static const _i71.PageInfo<SetLogisticsFuelPreferenceRouteArgs> page =
-      _i71.PageInfo<SetLogisticsFuelPreferenceRouteArgs>(name);
+  static const _i74.PageInfo<SetLogisticsFuelPreferenceRouteArgs> page =
+      _i74.PageInfo<SetLogisticsFuelPreferenceRouteArgs>(name);
 }
 
 class SetLogisticsFuelPreferenceRouteArgs {
@@ -1852,7 +1904,7 @@ class SetLogisticsFuelPreferenceRouteArgs {
     required this.orgEnrollId,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String orgEnrollId;
 
@@ -1863,12 +1915,12 @@ class SetLogisticsFuelPreferenceRouteArgs {
 }
 
 /// generated route for
-/// [_i39.FundTransferPage]
-class FundTransferRoute extends _i71.PageRouteInfo<FundTransferRouteArgs> {
+/// [_i41.FundTransferPage]
+class FundTransferRoute extends _i74.PageRouteInfo<FundTransferRouteArgs> {
   FundTransferRoute({
-    _i72.Key? key,
+    _i75.Key? key,
     required String orgEnrollId,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           FundTransferRoute.name,
           args: FundTransferRouteArgs(
@@ -1881,8 +1933,8 @@ class FundTransferRoute extends _i71.PageRouteInfo<FundTransferRouteArgs> {
 
   static const String name = 'FundTransferRoute';
 
-  static const _i71.PageInfo<FundTransferRouteArgs> page =
-      _i71.PageInfo<FundTransferRouteArgs>(name);
+  static const _i74.PageInfo<FundTransferRouteArgs> page =
+      _i74.PageInfo<FundTransferRouteArgs>(name);
 }
 
 class FundTransferRouteArgs {
@@ -1891,7 +1943,7 @@ class FundTransferRouteArgs {
     required this.orgEnrollId,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String orgEnrollId;
 
@@ -1902,13 +1954,13 @@ class FundTransferRouteArgs {
 }
 
 /// generated route for
-/// [_i40.LogisticsOrganisationByEnrolmentId]
+/// [_i42.LogisticsOrganisationByEnrolmentId]
 class LogisticsOrganisationByEnrolmentId
-    extends _i71.PageRouteInfo<LogisticsOrganisationByEnrolmentIdArgs> {
+    extends _i74.PageRouteInfo<LogisticsOrganisationByEnrolmentIdArgs> {
   LogisticsOrganisationByEnrolmentId({
     required String enrolId,
-    _i73.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i76.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           LogisticsOrganisationByEnrolmentId.name,
           args: LogisticsOrganisationByEnrolmentIdArgs(
@@ -1921,8 +1973,8 @@ class LogisticsOrganisationByEnrolmentId
 
   static const String name = 'LogisticsOrganisationByEnrolmentId';
 
-  static const _i71.PageInfo<LogisticsOrganisationByEnrolmentIdArgs> page =
-      _i71.PageInfo<LogisticsOrganisationByEnrolmentIdArgs>(name);
+  static const _i74.PageInfo<LogisticsOrganisationByEnrolmentIdArgs> page =
+      _i74.PageInfo<LogisticsOrganisationByEnrolmentIdArgs>(name);
 }
 
 class LogisticsOrganisationByEnrolmentIdArgs {
@@ -1933,7 +1985,7 @@ class LogisticsOrganisationByEnrolmentIdArgs {
 
   final String enrolId;
 
-  final _i73.Key? key;
+  final _i76.Key? key;
 
   @override
   String toString() {
@@ -1942,13 +1994,13 @@ class LogisticsOrganisationByEnrolmentIdArgs {
 }
 
 /// generated route for
-/// [_i41.VehicleWiseUsagePage]
+/// [_i43.VehicleWiseUsagePage]
 class VehicleWiseUsageRoute
-    extends _i71.PageRouteInfo<VehicleWiseUsageRouteArgs> {
+    extends _i74.PageRouteInfo<VehicleWiseUsageRouteArgs> {
   VehicleWiseUsageRoute({
     required String orgId,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           VehicleWiseUsageRoute.name,
           args: VehicleWiseUsageRouteArgs(
@@ -1961,8 +2013,8 @@ class VehicleWiseUsageRoute
 
   static const String name = 'VehicleWiseUsageRoute';
 
-  static const _i71.PageInfo<VehicleWiseUsageRouteArgs> page =
-      _i71.PageInfo<VehicleWiseUsageRouteArgs>(name);
+  static const _i74.PageInfo<VehicleWiseUsageRouteArgs> page =
+      _i74.PageInfo<VehicleWiseUsageRouteArgs>(name);
 }
 
 class VehicleWiseUsageRouteArgs {
@@ -1973,7 +2025,7 @@ class VehicleWiseUsageRouteArgs {
 
   final String orgId;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -1982,9 +2034,9 @@ class VehicleWiseUsageRouteArgs {
 }
 
 /// generated route for
-/// [_i42.CompleteInvitedLogistics]
-class CompleteInvitedLogistics extends _i71.PageRouteInfo<void> {
-  const CompleteInvitedLogistics({List<_i71.PageRouteInfo>? children})
+/// [_i44.CompleteInvitedLogistics]
+class CompleteInvitedLogistics extends _i74.PageRouteInfo<void> {
+  const CompleteInvitedLogistics({List<_i74.PageRouteInfo>? children})
       : super(
           CompleteInvitedLogistics.name,
           initialChildren: children,
@@ -1992,13 +2044,13 @@ class CompleteInvitedLogistics extends _i71.PageRouteInfo<void> {
 
   static const String name = 'CompleteInvitedLogistics';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i43.CreateLogisticsPage]
-class CreateLogisticsRoute extends _i71.PageRouteInfo<void> {
-  const CreateLogisticsRoute({List<_i71.PageRouteInfo>? children})
+/// [_i45.CreateLogisticsPage]
+class CreateLogisticsRoute extends _i74.PageRouteInfo<void> {
+  const CreateLogisticsRoute({List<_i74.PageRouteInfo>? children})
       : super(
           CreateLogisticsRoute.name,
           initialChildren: children,
@@ -2006,17 +2058,17 @@ class CreateLogisticsRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'CreateLogisticsRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i44.SetOrgPPIPreferencePage]
+/// [_i46.SetOrgPPIPreferencePage]
 class SetOrgPPIPreferenceRoute
-    extends _i71.PageRouteInfo<SetOrgPPIPreferenceRouteArgs> {
+    extends _i74.PageRouteInfo<SetOrgPPIPreferenceRouteArgs> {
   SetOrgPPIPreferenceRoute({
-    _i72.Key? key,
+    _i75.Key? key,
     required String orgEnrolld,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           SetOrgPPIPreferenceRoute.name,
           args: SetOrgPPIPreferenceRouteArgs(
@@ -2029,8 +2081,8 @@ class SetOrgPPIPreferenceRoute
 
   static const String name = 'SetOrgPPIPreferenceRoute';
 
-  static const _i71.PageInfo<SetOrgPPIPreferenceRouteArgs> page =
-      _i71.PageInfo<SetOrgPPIPreferenceRouteArgs>(name);
+  static const _i74.PageInfo<SetOrgPPIPreferenceRouteArgs> page =
+      _i74.PageInfo<SetOrgPPIPreferenceRouteArgs>(name);
 }
 
 class SetOrgPPIPreferenceRouteArgs {
@@ -2039,7 +2091,7 @@ class SetOrgPPIPreferenceRouteArgs {
     required this.orgEnrolld,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   final String orgEnrolld;
 
@@ -2050,9 +2102,9 @@ class SetOrgPPIPreferenceRouteArgs {
 }
 
 /// generated route for
-/// [_i45.ListLogisticsPage]
-class ListLogisticsRoute extends _i71.PageRouteInfo<void> {
-  const ListLogisticsRoute({List<_i71.PageRouteInfo>? children})
+/// [_i47.ListLogisticsPage]
+class ListLogisticsRoute extends _i74.PageRouteInfo<void> {
+  const ListLogisticsRoute({List<_i74.PageRouteInfo>? children})
       : super(
           ListLogisticsRoute.name,
           initialChildren: children,
@@ -2060,13 +2112,13 @@ class ListLogisticsRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'ListLogisticsRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i46.AddAxleServicePage]
-class AddAxleServiceRoute extends _i71.PageRouteInfo<void> {
-  const AddAxleServiceRoute({List<_i71.PageRouteInfo>? children})
+/// [_i48.AddAxleServicePage]
+class AddAxleServiceRoute extends _i74.PageRouteInfo<void> {
+  const AddAxleServiceRoute({List<_i74.PageRouteInfo>? children})
       : super(
           AddAxleServiceRoute.name,
           initialChildren: children,
@@ -2074,13 +2126,13 @@ class AddAxleServiceRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AddAxleServiceRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i47.CreateInvoice]
-class CreateInvoice extends _i71.PageRouteInfo<void> {
-  const CreateInvoice({List<_i71.PageRouteInfo>? children})
+/// [_i49.CreateInvoice]
+class CreateInvoice extends _i74.PageRouteInfo<void> {
+  const CreateInvoice({List<_i74.PageRouteInfo>? children})
       : super(
           CreateInvoice.name,
           initialChildren: children,
@@ -2088,13 +2140,13 @@ class CreateInvoice extends _i71.PageRouteInfo<void> {
 
   static const String name = 'CreateInvoice';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i48.AccountActiveRouter]
-class AccountActiveRouter extends _i71.PageRouteInfo<void> {
-  const AccountActiveRouter({List<_i71.PageRouteInfo>? children})
+/// [_i50.AccountActiveRouter]
+class AccountActiveRouter extends _i74.PageRouteInfo<void> {
+  const AccountActiveRouter({List<_i74.PageRouteInfo>? children})
       : super(
           AccountActiveRouter.name,
           initialChildren: children,
@@ -2102,17 +2154,17 @@ class AccountActiveRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AccountActiveRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i49.AccountActivationPage]
+/// [_i51.AccountActivationPage]
 class AccountActivationRoute
-    extends _i71.PageRouteInfo<AccountActivationRouteArgs> {
+    extends _i74.PageRouteInfo<AccountActivationRouteArgs> {
   AccountActivationRoute({
-    _i74.Key? key,
+    _i77.Key? key,
     required String token,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           AccountActivationRoute.name,
           args: AccountActivationRouteArgs(
@@ -2125,8 +2177,8 @@ class AccountActivationRoute
 
   static const String name = 'AccountActivationRoute';
 
-  static const _i71.PageInfo<AccountActivationRouteArgs> page =
-      _i71.PageInfo<AccountActivationRouteArgs>(name);
+  static const _i74.PageInfo<AccountActivationRouteArgs> page =
+      _i74.PageInfo<AccountActivationRouteArgs>(name);
 }
 
 class AccountActivationRouteArgs {
@@ -2135,7 +2187,7 @@ class AccountActivationRouteArgs {
     required this.token,
   });
 
-  final _i74.Key? key;
+  final _i77.Key? key;
 
   final String token;
 
@@ -2146,16 +2198,16 @@ class AccountActivationRouteArgs {
 }
 
 /// generated route for
-/// [_i50.LoginWithOtpForm]
-class LoginWithOtpForm extends _i71.PageRouteInfo<LoginWithOtpFormArgs> {
+/// [_i52.LoginWithOtpForm]
+class LoginWithOtpForm extends _i74.PageRouteInfo<LoginWithOtpFormArgs> {
   LoginWithOtpForm({
-    _i74.Key? key,
+    _i77.Key? key,
     bool isScrollable = false,
     bool isProfilePage = false,
     String? contactNumber,
     dynamic Function()? onSuccess,
     bool isEmail = false,
-    List<_i71.PageRouteInfo>? children,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           LoginWithOtpForm.name,
           args: LoginWithOtpFormArgs(
@@ -2171,8 +2223,8 @@ class LoginWithOtpForm extends _i71.PageRouteInfo<LoginWithOtpFormArgs> {
 
   static const String name = 'LoginWithOtpForm';
 
-  static const _i71.PageInfo<LoginWithOtpFormArgs> page =
-      _i71.PageInfo<LoginWithOtpFormArgs>(name);
+  static const _i74.PageInfo<LoginWithOtpFormArgs> page =
+      _i74.PageInfo<LoginWithOtpFormArgs>(name);
 }
 
 class LoginWithOtpFormArgs {
@@ -2185,7 +2237,7 @@ class LoginWithOtpFormArgs {
     this.isEmail = false,
   });
 
-  final _i74.Key? key;
+  final _i77.Key? key;
 
   final bool isScrollable;
 
@@ -2204,12 +2256,12 @@ class LoginWithOtpFormArgs {
 }
 
 /// generated route for
-/// [_i51.AuthBackground]
-class AuthBackground extends _i71.PageRouteInfo<AuthBackgroundArgs> {
+/// [_i53.AuthBackground]
+class AuthBackground extends _i74.PageRouteInfo<AuthBackgroundArgs> {
   AuthBackground({
-    _i72.Key? key,
-    _i72.Widget? screenForm,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    _i75.Widget? screenForm,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           AuthBackground.name,
           args: AuthBackgroundArgs(
@@ -2221,8 +2273,8 @@ class AuthBackground extends _i71.PageRouteInfo<AuthBackgroundArgs> {
 
   static const String name = 'AuthBackground';
 
-  static const _i71.PageInfo<AuthBackgroundArgs> page =
-      _i71.PageInfo<AuthBackgroundArgs>(name);
+  static const _i74.PageInfo<AuthBackgroundArgs> page =
+      _i74.PageInfo<AuthBackgroundArgs>(name);
 }
 
 class AuthBackgroundArgs {
@@ -2231,9 +2283,9 @@ class AuthBackgroundArgs {
     this.screenForm,
   });
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
-  final _i72.Widget? screenForm;
+  final _i75.Widget? screenForm;
 
   @override
   String toString() {
@@ -2242,9 +2294,9 @@ class AuthBackgroundArgs {
 }
 
 /// generated route for
-/// [_i52.AxleStaffsRouter]
-class AxleStaffsRouter extends _i71.PageRouteInfo<void> {
-  const AxleStaffsRouter({List<_i71.PageRouteInfo>? children})
+/// [_i54.AxleStaffsRouter]
+class AxleStaffsRouter extends _i74.PageRouteInfo<void> {
+  const AxleStaffsRouter({List<_i74.PageRouteInfo>? children})
       : super(
           AxleStaffsRouter.name,
           initialChildren: children,
@@ -2252,13 +2304,13 @@ class AxleStaffsRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AxleStaffsRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i53.AxleVehiclesRouter]
-class AxleVehiclesRouter extends _i71.PageRouteInfo<void> {
-  const AxleVehiclesRouter({List<_i71.PageRouteInfo>? children})
+/// [_i55.AxleVehiclesRouter]
+class AxleVehiclesRouter extends _i74.PageRouteInfo<void> {
+  const AxleVehiclesRouter({List<_i74.PageRouteInfo>? children})
       : super(
           AxleVehiclesRouter.name,
           initialChildren: children,
@@ -2266,13 +2318,13 @@ class AxleVehiclesRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AxleVehiclesRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i54.AxleAutoRouter]
-class AxleAutoRouter extends _i71.PageRouteInfo<void> {
-  const AxleAutoRouter({List<_i71.PageRouteInfo>? children})
+/// [_i56.AxleAutoRouter]
+class AxleAutoRouter extends _i74.PageRouteInfo<void> {
+  const AxleAutoRouter({List<_i74.PageRouteInfo>? children})
       : super(
           AxleAutoRouter.name,
           initialChildren: children,
@@ -2280,13 +2332,13 @@ class AxleAutoRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AxleAutoRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i55.AxleCustomersRouter]
-class AxleCustomersRouter extends _i71.PageRouteInfo<void> {
-  const AxleCustomersRouter({List<_i71.PageRouteInfo>? children})
+/// [_i57.AxleCustomersRouter]
+class AxleCustomersRouter extends _i74.PageRouteInfo<void> {
+  const AxleCustomersRouter({List<_i74.PageRouteInfo>? children})
       : super(
           AxleCustomersRouter.name,
           initialChildren: children,
@@ -2294,16 +2346,16 @@ class AxleCustomersRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AxleCustomersRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i56.SelectedVehicle]
-class SelectedVehicle extends _i71.PageRouteInfo<SelectedVehicleArgs> {
+/// [_i58.SelectedVehicle]
+class SelectedVehicle extends _i74.PageRouteInfo<SelectedVehicleArgs> {
   SelectedVehicle({
     required String vehicleRegNo,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           SelectedVehicle.name,
           args: SelectedVehicleArgs(
@@ -2316,8 +2368,8 @@ class SelectedVehicle extends _i71.PageRouteInfo<SelectedVehicleArgs> {
 
   static const String name = 'SelectedVehicle';
 
-  static const _i71.PageInfo<SelectedVehicleArgs> page =
-      _i71.PageInfo<SelectedVehicleArgs>(name);
+  static const _i74.PageInfo<SelectedVehicleArgs> page =
+      _i74.PageInfo<SelectedVehicleArgs>(name);
 }
 
 class SelectedVehicleArgs {
@@ -2328,7 +2380,7 @@ class SelectedVehicleArgs {
 
   final String vehicleRegNo;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -2337,9 +2389,9 @@ class SelectedVehicleArgs {
 }
 
 /// generated route for
-/// [_i57.VehicleRouter]
-class VehicleRouter extends _i71.PageRouteInfo<void> {
-  const VehicleRouter({List<_i71.PageRouteInfo>? children})
+/// [_i59.VehicleRouter]
+class VehicleRouter extends _i74.PageRouteInfo<void> {
+  const VehicleRouter({List<_i74.PageRouteInfo>? children})
       : super(
           VehicleRouter.name,
           initialChildren: children,
@@ -2347,16 +2399,16 @@ class VehicleRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'VehicleRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i58.SelectedStaffScreen]
-class SelectedStaffRoute extends _i71.PageRouteInfo<SelectedStaffRouteArgs> {
+/// [_i60.SelectedStaffScreen]
+class SelectedStaffRoute extends _i74.PageRouteInfo<SelectedStaffRouteArgs> {
   SelectedStaffRoute({
     required String userEnrolmentId,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           SelectedStaffRoute.name,
           args: SelectedStaffRouteArgs(
@@ -2369,8 +2421,8 @@ class SelectedStaffRoute extends _i71.PageRouteInfo<SelectedStaffRouteArgs> {
 
   static const String name = 'SelectedStaffRoute';
 
-  static const _i71.PageInfo<SelectedStaffRouteArgs> page =
-      _i71.PageInfo<SelectedStaffRouteArgs>(name);
+  static const _i74.PageInfo<SelectedStaffRouteArgs> page =
+      _i74.PageInfo<SelectedStaffRouteArgs>(name);
 }
 
 class SelectedStaffRouteArgs {
@@ -2381,7 +2433,7 @@ class SelectedStaffRouteArgs {
 
   final String userEnrolmentId;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -2390,9 +2442,9 @@ class SelectedStaffRouteArgs {
 }
 
 /// generated route for
-/// [_i59.StaffRouter]
-class StaffRouter extends _i71.PageRouteInfo<void> {
-  const StaffRouter({List<_i71.PageRouteInfo>? children})
+/// [_i61.StaffRouter]
+class StaffRouter extends _i74.PageRouteInfo<void> {
+  const StaffRouter({List<_i74.PageRouteInfo>? children})
       : super(
           StaffRouter.name,
           initialChildren: children,
@@ -2400,13 +2452,13 @@ class StaffRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'StaffRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i60.AxlePartnersRouter]
-class AxlePartnersRouter extends _i71.PageRouteInfo<void> {
-  const AxlePartnersRouter({List<_i71.PageRouteInfo>? children})
+/// [_i62.AxlePartnersRouter]
+class AxlePartnersRouter extends _i74.PageRouteInfo<void> {
+  const AxlePartnersRouter({List<_i74.PageRouteInfo>? children})
       : super(
           AxlePartnersRouter.name,
           initialChildren: children,
@@ -2414,16 +2466,16 @@ class AxlePartnersRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AxlePartnersRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i61.SelectedOrgScreen]
-class SelectedOrgRoute extends _i71.PageRouteInfo<SelectedOrgRouteArgs> {
+/// [_i63.SelectedOrgScreen]
+class SelectedOrgRoute extends _i74.PageRouteInfo<SelectedOrgRouteArgs> {
   SelectedOrgRoute({
     required String selOrg,
-    _i73.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i76.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           SelectedOrgRoute.name,
           args: SelectedOrgRouteArgs(
@@ -2436,8 +2488,8 @@ class SelectedOrgRoute extends _i71.PageRouteInfo<SelectedOrgRouteArgs> {
 
   static const String name = 'SelectedOrgRoute';
 
-  static const _i71.PageInfo<SelectedOrgRouteArgs> page =
-      _i71.PageInfo<SelectedOrgRouteArgs>(name);
+  static const _i74.PageInfo<SelectedOrgRouteArgs> page =
+      _i74.PageInfo<SelectedOrgRouteArgs>(name);
 }
 
 class SelectedOrgRouteArgs {
@@ -2448,7 +2500,7 @@ class SelectedOrgRouteArgs {
 
   final String selOrg;
 
-  final _i73.Key? key;
+  final _i76.Key? key;
 
   @override
   String toString() {
@@ -2457,12 +2509,12 @@ class SelectedOrgRouteArgs {
 }
 
 /// generated route for
-/// [_i62.OrgDashboardScreen]
-class OrgDashboardRoute extends _i71.PageRouteInfo<OrgDashboardRouteArgs> {
+/// [_i64.OrgDashboardScreen]
+class OrgDashboardRoute extends _i74.PageRouteInfo<OrgDashboardRouteArgs> {
   OrgDashboardRoute({
     required String selOrgId,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           OrgDashboardRoute.name,
           args: OrgDashboardRouteArgs(
@@ -2475,8 +2527,8 @@ class OrgDashboardRoute extends _i71.PageRouteInfo<OrgDashboardRouteArgs> {
 
   static const String name = 'OrgDashboardRoute';
 
-  static const _i71.PageInfo<OrgDashboardRouteArgs> page =
-      _i71.PageInfo<OrgDashboardRouteArgs>(name);
+  static const _i74.PageInfo<OrgDashboardRouteArgs> page =
+      _i74.PageInfo<OrgDashboardRouteArgs>(name);
 }
 
 class OrgDashboardRouteArgs {
@@ -2487,7 +2539,7 @@ class OrgDashboardRouteArgs {
 
   final String selOrgId;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -2496,9 +2548,9 @@ class OrgDashboardRouteArgs {
 }
 
 /// generated route for
-/// [_i63.AxlePartnerCommissionRouter]
-class AxlePartnerCommissionRouter extends _i71.PageRouteInfo<void> {
-  const AxlePartnerCommissionRouter({List<_i71.PageRouteInfo>? children})
+/// [_i65.AxlePartnerCommissionRouter]
+class AxlePartnerCommissionRouter extends _i74.PageRouteInfo<void> {
+  const AxlePartnerCommissionRouter({List<_i74.PageRouteInfo>? children})
       : super(
           AxlePartnerCommissionRouter.name,
           initialChildren: children,
@@ -2506,13 +2558,13 @@ class AxlePartnerCommissionRouter extends _i71.PageRouteInfo<void> {
 
   static const String name = 'AxlePartnerCommissionRouter';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i64.UserNotFoundScreen]
-class UserNotFoundRoute extends _i71.PageRouteInfo<void> {
-  const UserNotFoundRoute({List<_i71.PageRouteInfo>? children})
+/// [_i66.UserNotFoundScreen]
+class UserNotFoundRoute extends _i74.PageRouteInfo<void> {
+  const UserNotFoundRoute({List<_i74.PageRouteInfo>? children})
       : super(
           UserNotFoundRoute.name,
           initialChildren: children,
@@ -2520,17 +2572,17 @@ class UserNotFoundRoute extends _i71.PageRouteInfo<void> {
 
   static const String name = 'UserNotFoundRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i65.SelectedPartnerScreen]
+/// [_i67.SelectedPartnerScreen]
 class SelectedPartnerRoute
-    extends _i71.PageRouteInfo<SelectedPartnerRouteArgs> {
+    extends _i74.PageRouteInfo<SelectedPartnerRouteArgs> {
   SelectedPartnerRoute({
     required String partnerId,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           SelectedPartnerRoute.name,
           args: SelectedPartnerRouteArgs(
@@ -2543,8 +2595,8 @@ class SelectedPartnerRoute
 
   static const String name = 'SelectedPartnerRoute';
 
-  static const _i71.PageInfo<SelectedPartnerRouteArgs> page =
-      _i71.PageInfo<SelectedPartnerRouteArgs>(name);
+  static const _i74.PageInfo<SelectedPartnerRouteArgs> page =
+      _i74.PageInfo<SelectedPartnerRouteArgs>(name);
 }
 
 class SelectedPartnerRouteArgs {
@@ -2555,7 +2607,7 @@ class SelectedPartnerRouteArgs {
 
   final String partnerId;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -2564,13 +2616,13 @@ class SelectedPartnerRouteArgs {
 }
 
 /// generated route for
-/// [_i66.SelectedCustomerScreen]
+/// [_i68.SelectedCustomerScreen]
 class SelectedCustomerRoute
-    extends _i71.PageRouteInfo<SelectedCustomerRouteArgs> {
+    extends _i74.PageRouteInfo<SelectedCustomerRouteArgs> {
   SelectedCustomerRoute({
     required String custId,
-    _i72.Key? key,
-    List<_i71.PageRouteInfo>? children,
+    _i75.Key? key,
+    List<_i74.PageRouteInfo>? children,
   }) : super(
           SelectedCustomerRoute.name,
           args: SelectedCustomerRouteArgs(
@@ -2583,8 +2635,8 @@ class SelectedCustomerRoute
 
   static const String name = 'SelectedCustomerRoute';
 
-  static const _i71.PageInfo<SelectedCustomerRouteArgs> page =
-      _i71.PageInfo<SelectedCustomerRouteArgs>(name);
+  static const _i74.PageInfo<SelectedCustomerRouteArgs> page =
+      _i74.PageInfo<SelectedCustomerRouteArgs>(name);
 }
 
 class SelectedCustomerRouteArgs {
@@ -2595,7 +2647,7 @@ class SelectedCustomerRouteArgs {
 
   final String custId;
 
-  final _i72.Key? key;
+  final _i75.Key? key;
 
   @override
   String toString() {
@@ -2604,57 +2656,71 @@ class SelectedCustomerRouteArgs {
 }
 
 /// generated route for
-/// [_i67.PanScreen]
-class PanRoute extends _i71.PageRouteInfo<void> {
-  const PanRoute({List<_i71.PageRouteInfo>? children})
+/// [_i69.EcardVerificationDashboard]
+class EcardVerificationDashboard extends _i74.PageRouteInfo<void> {
+  const EcardVerificationDashboard({List<_i74.PageRouteInfo>? children})
       : super(
-          PanRoute.name,
+          EcardVerificationDashboard.name,
           initialChildren: children,
         );
 
-  static const String name = 'PanRoute';
+  static const String name = 'EcardVerificationDashboard';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i68.AadhaarScreen]
-class AadhaarRoute extends _i71.PageRouteInfo<void> {
-  const AadhaarRoute({List<_i71.PageRouteInfo>? children})
+/// [_i70.SearchDashboardHome]
+class SearchDashboardHome extends _i74.PageRouteInfo<void> {
+  const SearchDashboardHome({List<_i74.PageRouteInfo>? children})
       : super(
-          AadhaarRoute.name,
+          SearchDashboardHome.name,
           initialChildren: children,
         );
 
-  static const String name = 'AadhaarRoute';
+  static const String name = 'SearchDashboardHome';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i69.DrivingLicenseScreen]
-class DrivingLicenseRoute extends _i71.PageRouteInfo<void> {
-  const DrivingLicenseRoute({List<_i71.PageRouteInfo>? children})
+/// [_i71.RcDetailScreen]
+class RcDetailRoute extends _i74.PageRouteInfo<void> {
+  const RcDetailRoute({List<_i74.PageRouteInfo>? children})
       : super(
-          DrivingLicenseRoute.name,
+          RcDetailRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'DrivingLicenseRoute';
+  static const String name = 'RcDetailRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i70.CibilScreen]
-class CibilRoute extends _i71.PageRouteInfo<void> {
-  const CibilRoute({List<_i71.PageRouteInfo>? children})
+/// [_i72.RcScreen]
+class RcRoute extends _i74.PageRouteInfo<void> {
+  const RcRoute({List<_i74.PageRouteInfo>? children})
       : super(
-          CibilRoute.name,
+          RcRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'CibilRoute';
+  static const String name = 'RcRoute';
 
-  static const _i71.PageInfo<void> page = _i71.PageInfo<void>(name);
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i73.RcHistoryScreen]
+class RcHistoryRoute extends _i74.PageRouteInfo<void> {
+  const RcHistoryRoute({List<_i74.PageRouteInfo>? children})
+      : super(
+          RcHistoryRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'RcHistoryRoute';
+
+  static const _i74.PageInfo<void> page = _i74.PageInfo<void>(name);
 }
