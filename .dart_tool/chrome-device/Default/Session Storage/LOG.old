@@ -1,6 +1,19 @@
-2023/06/16-15:20:32.530 2007 Reusing MANIFEST /private/var/folders/7k/s1wscfpj0n5_6vbq4sm5_9s00000gn/T/flutter_tools.Q2G1cT/flutter_tools_chrome_device.yHJRcR/Default/Session Storage/MANIFEST-000001
-2023/06/16-15:20:32.530 2007 Recovering log #9
-2023/06/16-15:20:32.530 2007 (ignoring error) /private/var/folders/7k/s1wscfpj0n5_6vbq4sm5_9s00000gn/T/flutter_tools.Q2G1cT/flutter_tools_chrome_device.yHJRcR/Default/Session Storage/000009.log: dropping 15319 bytes; Corruption: checksum mismatch
-2023/06/16-15:20:32.531 2007 Reusing old log /private/var/folders/7k/s1wscfpj0n5_6vbq4sm5_9s00000gn/T/flutter_tools.Q2G1cT/flutter_tools_chrome_device.yHJRcR/Default/Session Storage/000009.log 
-2023/06/16-15:20:32.531 2007 Delete type=0 #6
-2023/06/16-15:20:32.531 2007 Delete type=0 #3
+2023/06/27-14:04:53.558 5203 Reusing MANIFEST /private/var/folders/7k/s1wscfpj0n5_6vbq4sm5_9s00000gn/T/flutter_tools.MqdGAN/flutter_tools_chrome_device.k8OeXj/Default/Session Storage/MANIFEST-000001
+2023/06/27-14:04:53.560 5203 Recovering log #36
+2023/06/27-14:04:53.561 5203 Reusing old log /private/var/folders/7k/s1wscfpj0n5_6vbq4sm5_9s00000gn/T/flutter_tools.MqdGAN/flutter_tools_chrome_device.k8OeXj/Default/Session Storage/000036.log 
+2023/06/27-14:04:53.562 5203 Delete type=0 #6
+2023/06/27-14:04:53.563 5203 Delete type=0 #12
+2023/06/27-14:04:53.564 5203 Delete type=0 #15
+2023/06/27-14:04:53.566 5203 Delete type=0 #3
+2023/06/27-14:04:53.566 5203 Delete type=2 #16
+2023/06/27-14:04:53.566 5203 Delete type=2 #7
+2023/06/27-14:04:53.566 5203 Delete type=2 #13
+2023/06/27-14:04:53.566 5203 Delete type=2 #10
+2023/06/27-14:04:53.566 5203 Delete type=2 #20
+2023/06/27-14:04:53.566 5203 Delete type=2 #23
+2023/06/27-14:04:53.566 5203 Delete type=2 #26
+2023/06/27-14:04:53.566 5203 Delete type=0 #33
+2023/06/27-14:04:53.566 5203 Delete type=0 #25
+2023/06/27-14:04:53.566 5203 Delete type=0 #18
+2023/06/27-14:04:53.566 5203 Delete type=0 #9
+2023/06/27-14:04:53.566 5203 Delete type=0 #22

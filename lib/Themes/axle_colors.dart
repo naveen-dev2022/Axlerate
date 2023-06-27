@@ -15,7 +15,7 @@ class AxleColors {
   static const axleAquaBlue = Color(0xFF00BCD4);
   static const axlePurple = Color(0xFF673AB7);
   static const axleGrey = Color(0xFFF4F4F6);
-  static const axleBgYellow = Color(0xFFFEF6DD);
+  static const axleBgYellow = Color(0xFFFCF9F0);
 
   static const enabledStatusColor = Color(0xFF009F82);
   static const pendingStatusColor = Color(0xFFFF9162);

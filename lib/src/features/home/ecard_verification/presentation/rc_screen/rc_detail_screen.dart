@@ -41,6 +41,15 @@ class _RcDetailScreenState extends ConsumerState<RcDetailScreen> {
                     ),
                   ),
                 ),
+                Positioned(
+                  bottom: 20,
+                  left: MediaQuery.of(context).size.width / 2 - 120 / 2,
+                  child: SvgPicture.asset(
+                    'assets/images/logo.svg',
+                    width: 100,
+                    height: 25,
+                  ),
+                ),
                 _buildRcDetail(rcDataList)
               ],
             ),
@@ -109,19 +118,23 @@ class _RcDetailScreenState extends ConsumerState<RcDetailScreen> {
                   const SizedBox(
                     height: 12,
                   ),
-                  _buildKeyValue(key: 'RC Number', value: data!.rcNumber!),
+                  _buildKeyValue(key: 'RC Number', value: data?.rcNumber ?? ""),
                   _buildKeyValue(
-                      key: 'Chassis Number', value: data.vehicleChasiNumber!),
+                      key: 'Chassis Number',
+                      value: data?.vehicleChasiNumber ?? ""),
                   _buildKeyValue(
-                      key: 'Engine Number', value: data.vehicleEngineNumber!),
+                      key: 'Engine Number',
+                      value: data?.vehicleEngineNumber ?? ""),
                   _buildKeyValue(
-                      key: 'Registered at', value: data.registeredAt!),
+                      key: 'Registered at', value: data?.registeredAt ?? ""),
                   _buildKeyValue(
-                      key: 'Registration Date', value: data.registrationDate!),
+                      key: 'Registration Date',
+                      value: data?.registrationDate ?? ""),
                   _buildKeyValue(
                       key: 'Manufacturing Date',
-                      value: data.manufacturingDate!),
-                  _buildKeyValue(key: 'Fitness Upto', value: data.fitUpTo!),
+                      value: data?.manufacturingDate ?? ""),
+                  _buildKeyValue(
+                      key: 'Fitness Upto', value: data?.fitUpTo ?? ""),
                 ],
               ),
             ),
@@ -150,12 +163,14 @@ class _RcDetailScreenState extends ConsumerState<RcDetailScreen> {
                   const SizedBox(
                     height: 12,
                   ),
-                  _buildKeyValue(key: 'Fuel Type', value: data.fuelType!),
+                  _buildKeyValue(key: 'Fuel Type', value: data?.fuelType ?? ""),
                   _buildKeyValue(
-                      key: 'Vehicle Category', value: data.vehicleCategory!),
+                      key: 'Vehicle Category',
+                      value: data?.vehicleCategory ?? ""),
                   _buildKeyValue(
-                      key: 'Maker Description', value: data.makerDescription!),
-                  _buildKeyValue(key: 'Model', value: data.mobileNumber!),
+                      key: 'Maker Description',
+                      value: data?.makerDescription ?? ""),
+                  _buildKeyValue(key: 'Model', value: data?.mobileNumber ?? ""),
                 ],
               ),
             ),
@@ -186,12 +201,13 @@ class _RcDetailScreenState extends ConsumerState<RcDetailScreen> {
                   ),
                   _buildKeyValue(
                       key: 'Insurance Company Name',
-                      value: data.insuranceCompany!),
+                      value: data?.insuranceCompany ?? ""),
                   _buildKeyValue(
                       key: 'Insurance Policy Number',
-                      value: data.insurancePolicyNumber!),
+                      value: data?.insurancePolicyNumber ?? ""),
                   _buildKeyValue(
-                      key: 'Insurance Expiry Date', value: data.insuranceUpto!),
+                      key: 'Insurance Expiry Date',
+                      value: data?.insuranceUpto ?? ""),
                 ],
               ),
             ),
@@ -220,9 +236,10 @@ class _RcDetailScreenState extends ConsumerState<RcDetailScreen> {
                   const SizedBox(
                     height: 12,
                   ),
-                  _buildKeyValue(key: 'PUCC Number', value: data.puccNumber!),
                   _buildKeyValue(
-                      key: 'PUCC Expiry Date', value: data.puccUpto!),
+                      key: 'PUCC Number', value: data?.puccNumber ?? ""),
+                  _buildKeyValue(
+                      key: 'PUCC Expiry Date', value: data?.puccUpto ?? ""),
                 ],
               ),
             ),
@@ -253,10 +270,11 @@ class _RcDetailScreenState extends ConsumerState<RcDetailScreen> {
                   ),
                   _buildKeyValue(
                       key: 'Full Name of Vehicle Owner',
-                      value: data.ownerName!),
-                  _buildKeyValue(key: 'Father’s Name', value: data.fatherName!),
+                      value: data?.ownerName ?? ""),
                   _buildKeyValue(
-                      key: 'Mobile Number', value: data.mobileNumber!),
+                      key: 'Father’s Name', value: data?.fatherName ?? ""),
+                  _buildKeyValue(
+                      key: 'Mobile Number', value: data?.mobileNumber ?? ""),
                 ],
               ),
             ),
@@ -272,14 +290,22 @@ class _RcDetailScreenState extends ConsumerState<RcDetailScreen> {
   Widget _buildKeyValue({required String key, required String value}) {
     return Column(
       children: [
-        FittedBox(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(key),
-              Text(value),
-            ],
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(key),
+            const SizedBox(
+              width: 25,
+            ),
+            Flexible(
+              fit: FlexFit.loose,
+              child: Text(
+                value,
+                softWrap: false,
+                overflow: TextOverflow.fade,
+              ),
+            ),
+          ],
         ),
         const SizedBox(
           height: 10,

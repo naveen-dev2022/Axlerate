@@ -510,6 +510,18 @@ class AppNewRouter extends $AppNewRouter {
                                   TransitionsBuilders.noTransition,
                             ),
                             CustomRoute(
+                              path: 'challan-initial',
+                              page: ChallanInitialRoute.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
+                              path: 'challan-history',
+                              page: ChallanHistory.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
                               path: 'challan',
                               page: ChallanRoute.page,
                               transitionsBuilder:
@@ -534,6 +546,18 @@ class AppNewRouter extends $AppNewRouter {
                                   TransitionsBuilders.noTransition,
                             ),
                             CustomRoute(
+                              path: 'pan-screen',
+                              page: PanInitialRoute.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
+                              path: 'pan-history',
+                              page: PanHistoryRoute.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
                               path: 'pan-details',
                               page: PanRoute.page,
                               transitionsBuilder:
@@ -541,18 +565,54 @@ class AppNewRouter extends $AppNewRouter {
                             ),
                             CustomRoute(
                               path: 'aadhaar',
+                              page: AadharRouteInitial.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
+                              path: 'aadhaar-otp',
+                              page: AadharOtpRoute.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
+                              path: 'aadhaar-history',
+                              page: AadharHistoryRoute.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
+                              path: 'aadhaar-detail',
                               page: AadhaarRoute.page,
                               transitionsBuilder:
                                   TransitionsBuilders.noTransition,
                             ),
                             CustomRoute(
                               path: 'driving-license',
+                              page: DrivingLicenseInitial.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
+                              path: 'driving-license-history',
+                              page: DrHistory.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
+                              path: 'driving-license-detail',
                               page: DrivingLicenseRoute.page,
                               transitionsBuilder:
                                   TransitionsBuilders.noTransition,
                             ),
                             CustomRoute(
-                              path: 'cbil-score',
+                              path: 'credit-score',
+                              page: CreditScoreInitial.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
+                              path: 'credit-score-detail',
                               page: CibilRoute.page,
                               transitionsBuilder:
                                   TransitionsBuilders.noTransition,

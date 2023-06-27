@@ -297,6 +297,18 @@ class RouteUtils {
   static String getChallanPath() {
     String orgId =
         sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/challan-initial';
+  }
+
+  static String getChallanHistoryPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/challan-history';
+  }
+
+  static String getChallanDetailPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/e-card-verification/challan';
   }
 
@@ -318,10 +330,28 @@ class RouteUtils {
     return '/app/${orgId.toLowerCase()}/e-card-verification/rc-history';
   }
 
-  static String getPanPath() {
+  static String getPanDetailPath() {
     String orgId =
         sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/e-card-verification/pan-details';
+  }
+
+  static String getPanPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/pan-screen';
+  }
+
+  static String getPanHistoryPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/pan-history';
+  }
+
+  static String getAadhaarDetailPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/aadhaar-detail';
   }
 
   static String getAadhaarPath() {
@@ -330,16 +360,46 @@ class RouteUtils {
     return '/app/${orgId.toLowerCase()}/e-card-verification/aadhaar';
   }
 
+  static String getAadhaarOtpPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/aadhaar-otp';
+  }
+
+  static String getAadhaarHistoryPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/aadhaar-history';
+  }
+
+  static String getDrivingLicenseDetailPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/driving-license-detail';
+  }
+
   static String getDrivingLicensePath() {
     String orgId =
         sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
     return '/app/${orgId.toLowerCase()}/e-card-verification/driving-license';
   }
 
+  static String getDrivingLicenseHistoryPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/driving-license-history';
+  }
+
+  static String getCbilScoreDetailPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/credit-score-detail';
+  }
+
   static String getCbilScorePath() {
     String orgId =
         sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
-    return '/app/${orgId.toLowerCase()}/e-card-verification/cbil-score';
+    return '/app/${orgId.toLowerCase()}/e-card-verification/credit-score';
   }
 
   // static String getCreatePaymentsPath() {

@@ -49,6 +49,15 @@ class _RcHistoryScreenState extends State<RcHistoryScreen> {
                       ),
                     ),
                   ),
+                  Positioned(
+                    bottom: 20,
+                    left: MediaQuery.of(context).size.width / 2 - 120 / 2,
+                    child: SvgPicture.asset(
+                      'assets/images/logo.svg',
+                      width: 100,
+                      height: 25,
+                    ),
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -77,7 +86,11 @@ class _RcHistoryScreenState extends State<RcHistoryScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SvgPicture.asset('assets/images/rc.svg'),
+                              SvgPicture.asset(
+                                'assets/images/rc.svg',
+                                width: 25,
+                                height: 25,
+                              ),
                               const SizedBox(
                                 width: 18,
                               ),

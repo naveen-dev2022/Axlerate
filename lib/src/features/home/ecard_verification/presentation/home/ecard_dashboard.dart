@@ -13,7 +13,7 @@ import '../../../../../utils/widgets/grid_view_builder.dart';
 
 void findRoute({required String value, required BuildContext context}) {
   switch (value) {
-    case "assets/images/challan.png":
+    case "assets/images/challan.svg":
       {
         context.router.pushNamed(RouteUtils.getChallanPath());
       }
@@ -38,7 +38,7 @@ void findRoute({required String value, required BuildContext context}) {
         context.router.pushNamed(RouteUtils.getDrivingLicensePath());
       }
       break;
-    case "assets/images/ccs.png":
+    case "assets/images/css_home.svg":
       {
         context.router.pushNamed(RouteUtils.getCbilScorePath());
       }
@@ -62,6 +62,30 @@ Widget navigationButton({required Function()? onTap}) {
         borderRadius: BorderRadius.circular(50),
       ),
       child: const Icon(Icons.arrow_forward_ios, color: AxleColors.axleWhite),
+    ),
+  );
+}
+
+Widget infoWidget() {
+  return Container(
+    decoration: BoxDecoration(
+      color: AxleColors.axleBgYellow,
+      borderRadius: BorderRadius.circular(8.0),
+      border: Border.all(color: AxleColors.axleSecondaryColor),
+    ),
+    padding: const EdgeInsets.all(4),
+    child: const Row(
+      children: [
+        Icon(
+          Icons.info_outlined,
+          size: 16,
+          color: AxleColors.axlePrimaryColor,
+        ),
+        SizedBox(
+          width: 6,
+        ),
+        Text('You can check your details once every 3 months')
+      ],
     ),
   );
 }
