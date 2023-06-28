@@ -12,6 +12,7 @@ import '../../../../../../values/constants.dart';
 import '../../../../../utils/axle_loader.dart';
 import '../../../../../utils/string_operations.dart';
 import '../../domain/pan_entity.dart';
+import '../common/common_widgets.dart';
 import '../controller/ecard_controller.dart';
 
 @RoutePage()
@@ -49,25 +50,10 @@ class _PanScreenState extends ConsumerState<PanScreen> {
               height: MediaQuery.of(context).size.height,
               child: Stack(
                 children: [
-                  Positioned(
-                    bottom: 0,
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      child: SvgPicture.asset(
-                        'assets/images/bg_stack.svg',
-                        fit: BoxFit.fitWidth,
-                      ),
-                    ),
+                  ECardVerificationWidgets.drawBGStackImageWidget(
+                    context: context,
                   ),
-                  Positioned(
-                    bottom: 20,
-                    left: MediaQuery.of(context).size.width / 2 - 120 / 2,
-                    child: SvgPicture.asset(
-                      'assets/images/logo.svg',
-                      width: 100,
-                      height: 25,
-                    ),
-                  ),
+                  ECardVerificationWidgets.drawLogoWidget(context: context),
                   _buildPanDetail(panDataList)
                 ],
               ),
@@ -89,28 +75,10 @@ class _PanScreenState extends ConsumerState<PanScreen> {
             const SizedBox(
               height: 16,
             ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Color(0x1A000000),
-                    offset: Offset(0, 10),
-                    blurRadius: 25,
-                    spreadRadius: 0,
-                  ),
-                ],
-                color: Colors.white,
-                border: Border.all(
-                  color: AxleColors.axleSecondaryColor,
-                  width: 1.5,
-                ),
-              ),
-              child: ListTile(
-                leading: SvgPicture.asset('assets/images/rc_detail.svg'),
-                title: const Text('PAN Card Number'),
-                subtitle: Text("${data?.idNumber}"),
-              ),
+            ECardVerificationWidgets.detailHeadingCard(
+              icon: 'assets/images/rc_detail.svg',
+              title: 'PAN Card Number',
+              subTitle: data?.idNumber,
             ),
             const SizedBox(
               height: 16,
@@ -133,17 +101,25 @@ class _PanScreenState extends ConsumerState<PanScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('PAN Card Details'),
+                  Text(
+                    'PAN Card Details',
+                    style: AxleTextStyle.poppins14w500Blue,
+                  ),
                   const SizedBox(
                     height: 12,
                   ),
-                  _buildKeyValue(
-                      key: 'PAN Holder Full Name', value: data?.fullName ?? ""),
-                  _buildKeyValue(
-                      key: 'PAN Status', value: data?.panStatus ?? ""),
-                  _buildKeyValue(
-                      key: 'Aadhar Linking Status',
-                      value: data?.aadhaarSeedingStatus ?? ""),
+                  ECardVerificationWidgets.buildKeyValue(
+                    key: 'PAN Holder Full Name',
+                    value: data?.fullName,
+                  ),
+                  ECardVerificationWidgets.buildKeyValue(
+                    key: 'PAN Status',
+                    value: data?.panStatus,
+                  ),
+                  ECardVerificationWidgets.buildKeyValue(
+                    key: 'Aadhar Linking Status',
+                    value: data?.aadhaarSeedingStatus,
+                  ),
                 ],
               ),
             ),
@@ -153,33 +129,6 @@ class _PanScreenState extends ConsumerState<PanScreen> {
           ],
         ),
       ),
-    );
-  }
-
-  Widget _buildKeyValue({required String key, required String value}) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(key),
-            const SizedBox(
-              width: 25,
-            ),
-            Flexible(
-              fit: FlexFit.loose,
-              child: Text(
-                value,
-                softWrap: false,
-                overflow: TextOverflow.fade,
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(
-          height: 10,
-        )
-      ],
     );
   }
 }

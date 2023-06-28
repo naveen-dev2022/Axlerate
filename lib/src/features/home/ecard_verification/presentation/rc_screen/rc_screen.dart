@@ -1,10 +1,11 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:axlerate/src/features/home/ecard_verification/presentation/common/dynamic_verification_card.dart';
+import 'package:axlerate/src/features/home/ecard_verification/presentation/common/common_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../../Themes/axle_colors.dart';
+import '../../../../../../Themes/text_style_config.dart';
 import '../../../../../../responsive.dart';
 import '../../../../../../router/route_utils.dart';
 import '../../../../../../values/constants.dart';
@@ -77,105 +78,102 @@ class _RcScreenState extends ConsumerState<RcScreen> {
               Row(
                 children: [
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField1Controller,
-                        keyboardType: TextInputType.text,
-                        maxLength: 2,
-                        decoration: _inputDecoration.copyWith(hintText: 'AB'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(RegExp(r'[A-Z]')),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value?.length != 2,
-                          );
-                        },
-                        focusNode: _textField1FocusNode,
-                        onChanged: (value) {
-                          if (value.length == 2) {
-                            _moveToNextField(
-                                _textField1FocusNode, _textField2FocusNode);
-                          }
-                        },
-                      ),
+                    child: TextFormField(
+                      controller: _textField1Controller,
+                      keyboardType: TextInputType.text,
+                      maxLength: 2,
+                      decoration: _inputDecoration.copyWith(hintText: 'AB'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[A-Z]')),
+                      ],
+                      validator: (value) {
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value?.length != 2,
+                        );
+                      },
+                      focusNode: _textField1FocusNode,
+                      onChanged: (value) {
+                        if (value.length == 2) {
+                          _moveToNextField(
+                              _textField1FocusNode, _textField2FocusNode);
+                        }
+                      },
                     ),
                   ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField2Controller,
-                        keyboardType: TextInputType.number,
-                        maxLength: 2,
-                        decoration: _inputDecoration.copyWith(hintText: '12'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value?.length != 2,
-                          );
-                        },
-                        focusNode: _textField2FocusNode,
-                        onChanged: (value) {
-                          if (value.length == 2) {
-                            _moveToNextField(
-                                _textField2FocusNode, _textField3FocusNode);
-                          }
-                        },
-                      ),
-                    ),
+                  const SizedBox(
+                    width: 8,
                   ),
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField3Controller,
-                        keyboardType: TextInputType.text,
-                        maxLength: 2,
-                        decoration: _inputDecoration.copyWith(hintText: 'CD'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(RegExp(r'[A-Z]')),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value!.length > 2,
-                          );
-                        },
-                        focusNode: _textField3FocusNode,
-                        onChanged: (value) {
-                          if (value.length <= 2) {
-                            _moveToNextField(
-                                _textField3FocusNode, _textField4FocusNode);
-                          }
-                        },
-                      ),
+                    child: TextFormField(
+                      controller: _textField2Controller,
+                      keyboardType: TextInputType.number,
+                      maxLength: 2,
+                      decoration: _inputDecoration.copyWith(hintText: '12'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+                      ],
+                      validator: (value) {
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value?.length != 2,
+                        );
+                      },
+                      focusNode: _textField2FocusNode,
+                      onChanged: (value) {
+                        if (value.length == 2) {
+                          _moveToNextField(
+                              _textField2FocusNode, _textField3FocusNode);
+                        }
+                      },
                     ),
                   ),
+                  const SizedBox(
+                    width: 8,
+                  ),
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField4Controller,
-                        keyboardType: TextInputType.number,
-                        maxLength: 4,
-                        decoration: _inputDecoration.copyWith(hintText: '1234'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value!.length > 4,
-                          );
-                        },
-                        focusNode: _textField4FocusNode,
-                      ),
+                    child: TextFormField(
+                      controller: _textField3Controller,
+                      keyboardType: TextInputType.text,
+                      maxLength: 2,
+                      decoration: _inputDecoration.copyWith(hintText: 'CD'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[A-Z]')),
+                      ],
+                      validator: (value) {
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value!.length > 2,
+                        );
+                      },
+                      focusNode: _textField3FocusNode,
+                      onChanged: (value) {
+                        if (value.length <= 2) {
+                          _moveToNextField(
+                              _textField3FocusNode, _textField4FocusNode);
+                        }
+                      },
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Expanded(
+                    child: TextFormField(
+                      controller: _textField4Controller,
+                      keyboardType: TextInputType.number,
+                      maxLength: 4,
+                      decoration: _inputDecoration.copyWith(hintText: '1234'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+                      ],
+                      validator: (value) {
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value!.length > 4,
+                        );
+                      },
+                      focusNode: _textField4FocusNode,
                     ),
                   ),
                 ],
@@ -243,38 +241,26 @@ class _RcScreenState extends ConsumerState<RcScreen> {
               child: Stack(
                 fit: StackFit.expand,
                 children: [
-                  Positioned(
-                    bottom: 0,
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      child: SvgPicture.asset(
-                        'assets/images/bg_stack.svg',
-                        fit: BoxFit.fitWidth,
-                      ),
-                    ),
+                  ECardVerificationWidgets.drawBGStackImageWidget(
+                    context: context,
                   ),
-                  Positioned(
-                    bottom: 20,
-                    left: MediaQuery.of(context).size.width / 2 - 120 / 2,
-                    child: SvgPicture.asset(
-                      'assets/images/logo.svg',
-                      width: 100,
-                      height: 25,
-                    ),
-                  ),
+                  ECardVerificationWidgets.drawLogoWidget(context: context),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(
                         height: 16,
                       ),
-                      const Text('Enter Vehicle Registration Number'),
+                      Text(
+                        'Enter Vehicle Registration Number',
+                        style: AxleTextStyle.poppins12w400,
+                      ),
                       const SizedBox(
                         height: 5,
                       ),
                       enterOtpTextBar(),
                       const SizedBox(
-                        height: 8,
+                        height: 16,
                       ),
                       infoWidget(),
                       Expanded(child: Container()),

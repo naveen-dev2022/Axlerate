@@ -5,13 +5,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../../Themes/axle_colors.dart';
+import '../../../../../../Themes/text_style_config.dart';
 import '../../../../../../responsive.dart';
 import '../../../../../../router/route_utils.dart';
 import '../../../../../../values/constants.dart';
 import '../../../../../utils/loading_overlay_widget.dart';
 import '../../../../../utils/snackbar_util.dart';
 import '../../../../../utils/verifiy_vehicle_helper.dart';
-import '../common/dynamic_verification_card.dart';
+import '../common/common_widgets.dart';
 import '../controller/ecard_controller.dart';
 import '../home/ecard_dashboard.dart';
 
@@ -80,107 +81,105 @@ class _DrivingLicenseInitialState extends ConsumerState<DrivingLicenseInitial> {
               Row(
                 children: [
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField1Controller,
-                        keyboardType: TextInputType.text,
-                        maxLength: 4,
-                        decoration: _inputDecoration.copyWith(hintText: 'TN38'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(
-                            RegExp(r'^[A-Z]{2}\d{2}$'),
-                          ),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value?.length != 4,
-                          );
-                        },
-                        focusNode: _textField1FocusNode,
-                        onChanged: (value) {
-                          if (value.length == 4) {
-                            _moveToNextField(
-                                _textField1FocusNode, _textField2FocusNode);
-                          }
-                        },
-                      ),
+                    child: TextFormField(
+                      controller: _textField1Controller,
+                      keyboardType: TextInputType.text,
+                      maxLength: 4,
+                      decoration: _inputDecoration.copyWith(hintText: 'TN38'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(
+                          RegExp(r'^[A-Z]{0,2}\d{0,2}'),
+                        ),
+                      ],
+                      validator: (value) {
+                        print('value------$value');
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value?.length != 4,
+                        );
+                      },
+                      focusNode: _textField1FocusNode,
+                      onChanged: (value) {
+                        if (value.length == 4) {
+                          _moveToNextField(
+                              _textField1FocusNode, _textField2FocusNode);
+                        }
+                      },
                     ),
                   ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField2Controller,
-                        keyboardType: TextInputType.number,
-                        maxLength: 4,
-                        decoration: _inputDecoration.copyWith(hintText: '2019'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value?.length != 4,
-                          );
-                        },
-                        focusNode: _textField2FocusNode,
-                        onChanged: (value) {
-                          if (value.length == 4) {
-                            _moveToNextField(
-                                _textField2FocusNode, _textField3FocusNode);
-                          }
-                        },
-                      ),
-                    ),
+                  const SizedBox(
+                    width: 8,
                   ),
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField3Controller,
-                        keyboardType: TextInputType.number,
-                        maxLength: 4,
-                        decoration: _inputDecoration.copyWith(hintText: '0002'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value!.length != 4,
-                          );
-                        },
-                        focusNode: _textField3FocusNode,
-                        onChanged: (value) {
-                          if (value.length == 4) {
-                            _moveToNextField(
-                                _textField3FocusNode, _textField4FocusNode);
-                          }
-                        },
-                      ),
+                    child: TextFormField(
+                      controller: _textField2Controller,
+                      keyboardType: TextInputType.number,
+                      maxLength: 4,
+                      decoration: _inputDecoration.copyWith(hintText: '2019'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+                      ],
+                      validator: (value) {
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value?.length != 4,
+                        );
+                      },
+                      focusNode: _textField2FocusNode,
+                      onChanged: (value) {
+                        if (value.length == 4) {
+                          _moveToNextField(
+                              _textField2FocusNode, _textField3FocusNode);
+                        }
+                      },
                     ),
                   ),
+                  const SizedBox(
+                    width: 8,
+                  ),
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField4Controller,
-                        keyboardType: TextInputType.number,
-                        maxLength: 3,
-                        decoration: _inputDecoration.copyWith(hintText: '729'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value!.length != 3,
-                          );
-                        },
-                        focusNode: _textField4FocusNode,
-                      ),
+                    child: TextFormField(
+                      controller: _textField3Controller,
+                      keyboardType: TextInputType.number,
+                      maxLength: 4,
+                      decoration: _inputDecoration.copyWith(hintText: '0002'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+                      ],
+                      validator: (value) {
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value!.length != 4,
+                        );
+                      },
+                      focusNode: _textField3FocusNode,
+                      onChanged: (value) {
+                        if (value.length == 4) {
+                          _moveToNextField(
+                              _textField3FocusNode, _textField4FocusNode);
+                        }
+                      },
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Expanded(
+                    child: TextFormField(
+                      controller: _textField4Controller,
+                      keyboardType: TextInputType.number,
+                      maxLength: 3,
+                      decoration: _inputDecoration.copyWith(hintText: '729'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+                      ],
+                      validator: (value) {
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value!.length != 3,
+                        );
+                      },
+                      focusNode: _textField4FocusNode,
                     ),
                   ),
                 ],
@@ -274,13 +273,16 @@ class _DrivingLicenseInitialState extends ConsumerState<DrivingLicenseInitial> {
                       const SizedBox(
                         height: 16,
                       ),
-                      const Text('Enter Driving License Number'),
+                      Text(
+                        'Enter Driving License Number',
+                        style: AxleTextStyle.poppins12w400,
+                      ),
                       const SizedBox(
                         height: 5,
                       ),
                       enterOtpTextBar(),
                       const SizedBox(
-                        height: 8,
+                        height: 18,
                       ),
                       infoWidget(),
                       Expanded(child: Container()),
@@ -307,34 +309,34 @@ class _DrivingLicenseInitialState extends ConsumerState<DrivingLicenseInitial> {
   }
 
   Future validateDrivingLicense() async {
-    //  if (_formKey.currentState!.validate()) {
-    setState(() {
-      showValidationError = false;
-    });
-    _loader.show(context);
-    ref.read(drivingLicenseStateProvider.notifier).state = null;
-    await ref
-        .read(eCardControllerProvider)
-        .fetchDrivingLicenseData(
-          idNumber: _textField1Controller.text +
-              _textField2Controller.text +
-              _textField3Controller.text +
-              _textField4Controller.text,
-        )
-        .then(
-      (value) {
-        ref.read(drivingLicenseStateProvider.notifier).state = value;
-        final rcDataList = ref.watch(drivingLicenseStateProvider);
-        _loader.hide();
-        if (rcDataList?.status == true) {
-          context.router.pushNamed(RouteUtils.getDrivingLicenseDetailPath());
-          return null;
-        } else {
-          Snackbar.error("${rcDataList?.message}");
-          return null;
-        }
-      },
-    );
+    if (_formKey.currentState!.validate()) {
+      setState(() {
+        showValidationError = false;
+      });
+      _loader.show(context);
+      ref.read(drivingLicenseStateProvider.notifier).state = null;
+      await ref
+          .read(eCardControllerProvider)
+          .fetchDrivingLicenseData(
+            idNumber: _textField1Controller.text +
+                _textField2Controller.text +
+                _textField3Controller.text +
+                _textField4Controller.text,
+          )
+          .then(
+        (value) {
+          ref.read(drivingLicenseStateProvider.notifier).state = value;
+          final rcDataList = ref.watch(drivingLicenseStateProvider);
+          _loader.hide();
+          if (rcDataList?.status == true) {
+            context.router.pushNamed(RouteUtils.getDrivingLicenseDetailPath());
+            return null;
+          } else {
+            Snackbar.error("${rcDataList?.message}");
+            return null;
+          }
+        },
+      );
+    }
   }
-  // }
 }

@@ -4,12 +4,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../../Themes/axle_colors.dart';
+import '../../../../../../Themes/text_style_config.dart';
 import '../../../../../../responsive.dart';
 import '../../../../../../router/route_utils.dart';
 import '../../../../../../values/constants.dart';
 import '../../../../../utils/loading_overlay_widget.dart';
 import '../../../../../utils/snackbar_util.dart';
-import '../common/dynamic_verification_card.dart';
+import '../common/common_widgets.dart';
 import '../controller/ecard_controller.dart';
 import '../home/ecard_dashboard.dart';
 
@@ -75,79 +76,75 @@ class _PanInitialScreenState extends ConsumerState<PanInitialScreen> {
               Row(
                 children: [
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField1Controller,
-                        keyboardType: TextInputType.text,
-                        maxLength: 5,
-                        decoration:
-                            _inputDecoration.copyWith(hintText: 'ABCDE'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(RegExp(r'[A-Z]')),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value?.length != 5,
-                          );
-                        },
-                        focusNode: _textField1FocusNode,
-                        onChanged: (value) {
-                          if (value.length == 5) {
-                            _moveToNextField(
-                                _textField1FocusNode, _textField2FocusNode);
-                          }
-                        },
-                      ),
+                    child: TextFormField(
+                      controller: _textField1Controller,
+                      keyboardType: TextInputType.text,
+                      maxLength: 5,
+                      decoration: _inputDecoration.copyWith(hintText: 'ABCDE'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[A-Z]')),
+                      ],
+                      validator: (value) {
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value?.length != 5,
+                        );
+                      },
+                      focusNode: _textField1FocusNode,
+                      onChanged: (value) {
+                        if (value.length == 5) {
+                          _moveToNextField(
+                              _textField1FocusNode, _textField2FocusNode);
+                        }
+                      },
                     ),
                   ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField2Controller,
-                        keyboardType: TextInputType.number,
-                        maxLength: 4,
-                        decoration: _inputDecoration.copyWith(hintText: '1234'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value?.length != 4,
-                          );
-                        },
-                        focusNode: _textField2FocusNode,
-                        onChanged: (value) {
-                          if (value.length == 4) {
-                            _moveToNextField(
-                                _textField2FocusNode, _textField3FocusNode);
-                          }
-                        },
-                      ),
-                    ),
+                  const SizedBox(
+                    width: 8,
                   ),
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        controller: _textField3Controller,
-                        keyboardType: TextInputType.text,
-                        maxLength: 1,
-                        decoration: _inputDecoration.copyWith(hintText: 'F'),
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.allow(RegExp(r'[A-Z]')),
-                        ],
-                        validator: (value) {
-                          return _validateAadharField(
-                            value: value,
-                            isRestrictedValue: value?.length != 1,
-                          );
-                        },
-                        focusNode: _textField3FocusNode,
-                      ),
+                    child: TextFormField(
+                      controller: _textField2Controller,
+                      keyboardType: TextInputType.number,
+                      maxLength: 4,
+                      decoration: _inputDecoration.copyWith(hintText: '1234'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+                      ],
+                      validator: (value) {
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value?.length != 4,
+                        );
+                      },
+                      focusNode: _textField2FocusNode,
+                      onChanged: (value) {
+                        if (value.length == 4) {
+                          _moveToNextField(
+                              _textField2FocusNode, _textField3FocusNode);
+                        }
+                      },
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Expanded(
+                    child: TextFormField(
+                      controller: _textField3Controller,
+                      keyboardType: TextInputType.text,
+                      maxLength: 1,
+                      decoration: _inputDecoration.copyWith(hintText: 'F'),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[A-Z]')),
+                      ],
+                      validator: (value) {
+                        return _validateAadharField(
+                          value: value,
+                          isRestrictedValue: value?.length != 1,
+                        );
+                      },
+                      focusNode: _textField3FocusNode,
                     ),
                   ),
                 ],
@@ -221,13 +218,16 @@ class _PanInitialScreenState extends ConsumerState<PanInitialScreen> {
                       const SizedBox(
                         height: 16,
                       ),
-                      const Text('Enter PAN Card Number'),
+                      Text(
+                        'Enter PAN Card Number',
+                        style: AxleTextStyle.poppins12w400,
+                      ),
                       const SizedBox(
                         height: 5,
                       ),
                       enterOtpTextBar(),
                       const SizedBox(
-                        height: 8,
+                        height: 18,
                       ),
                       infoWidget(),
                       Expanded(

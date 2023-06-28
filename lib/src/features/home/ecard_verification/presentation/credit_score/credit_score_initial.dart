@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:axlerate/Themes/text_style_config.dart';
 import 'package:flutter/material.dart';
-import 'package:axlerate/src/features/home/ecard_verification/presentation/common/dynamic_verification_card.dart';
+import 'package:axlerate/src/features/home/ecard_verification/presentation/common/common_widgets.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -70,7 +71,7 @@ class _CreditScoreInitialState extends ConsumerState<CreditScoreInitial> {
   final InputDecoration _inputDecoration1 = InputDecoration(
     hintText: '',
     counterText: '',
-    hintStyle: TextStyle(color: Colors.grey.shade300),
+    hintStyle: AxleTextStyle.poppins16w400,
     contentPadding: const EdgeInsets.symmetric(
       horizontal: 12,
     ),
@@ -198,140 +199,178 @@ class _CreditScoreInitialState extends ConsumerState<CreditScoreInitial> {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            Positioned(
-              bottom: 0,
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: SvgPicture.asset(
-                  'assets/images/bg_stack.svg',
-                  fit: BoxFit.fitWidth,
-                ),
-              ),
+            ECardVerificationWidgets.drawBGStackImageWidget(
+              context: context,
             ),
-            Positioned(
-              bottom: 20,
-              left: MediaQuery.of(context).size.width / 2 - 120 / 2,
-              child: SvgPicture.asset(
-                'assets/images/logo.svg',
-                width: 100,
-                height: 25,
-              ),
-            ),
+            ECardVerificationWidgets.drawLogoWidget(context: context),
             Form(
               key: _formKey,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Align(
-                    alignment: Alignment.center,
-                    child: Column(
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SizedBox(
-                          height: 16,
+                        IconButton(
+                          onPressed: () {
+                            context.router.pop();
+                          },
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                            size: 18,
+                            color: AxleColors.axlePrimaryColor,
+                          ),
                         ),
-                        Text(
-                          'We need the following details to\ncheck your credit score',
-                          textAlign: TextAlign.center,
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text('Fields marked * are compulsory'),
-                        SizedBox(
-                          height: 26,
-                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            right: 12,
+                          ),
+                          child: GestureDetector(
+                            onTap: () {
+                              context.router.pushNamed(
+                                  RouteUtils.getCbilScoreHistoryPath());
+                            },
+                            child: SvgPicture.asset(
+                              'assets/images/history.svg',
+                              height: 20,
+                              width: 20,
+                              color: AxleColors.axlePrimaryColor,
+                            ),
+                          ),
+                        )
                       ],
                     ),
-                  ),
-                  const Text('First Name*'),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  TextFormField(
-                    controller: _firstNameController,
-                    keyboardType: TextInputType.text,
-                    decoration: _inputDecoration1.copyWith(
-                      hintText: 'Enter First Name',
+                    Align(
+                      alignment: Alignment.center,
+                      child: Column(
+                        children: [
+                          Text(
+                            'We need the following details to\ncheck your credit score',
+                            textAlign: TextAlign.center,
+                            style: AxleTextStyle.poppins14w500Blue,
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            'Fields marked * are compulsory',
+                            style: AxleTextStyle.poppins14w500Blue.copyWith(
+                              fontWeight: FontWeight.w100,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 26,
+                          ),
+                        ],
+                      ),
                     ),
-                    inputFormatters: <TextInputFormatter>[
-                      FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]')),
-                    ],
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return '* This field is compulsory';
-                      }
-                      return null;
-                    },
-                  ),
-                  const SizedBox(
-                    height: 22,
-                  ),
-                  const Text('Last Name*'),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  TextFormField(
-                    controller: _lastNameController,
-                    keyboardType: TextInputType.text,
-                    decoration: _inputDecoration1.copyWith(
-                      hintText: 'Enter Last Name',
+                    Text(
+                      'First Name*',
+                      style: AxleTextStyle.poppins12w400,
                     ),
-                    inputFormatters: <TextInputFormatter>[
-                      FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]')),
-                    ],
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return '* This field is compulsory';
-                      }
-                      return null;
-                    },
-                  ),
-                  const SizedBox(
-                    height: 22,
-                  ),
-                  const Text('Mobile Number*'),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  TextFormField(
-                    controller: _mobileController,
-                    keyboardType: TextInputType.number,
-                    decoration: _inputDecoration1.copyWith(
-                      hintText: 'Enter Mobile Number',
+                    const SizedBox(
+                      height: 5,
                     ),
-                    inputFormatters: <TextInputFormatter>[
-                      FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
-                    ],
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return '* This field is compulsory';
-                      }
-                      return null;
-                    },
-                  ),
-                  const SizedBox(
-                    height: 22,
-                  ),
-                  const Text('PAN Number*'),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  enterOtpTextBar(),
-                  Expanded(
-                    child: Container(),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: navigationButton(
-                      onTap: () async {
-                        await validatePan();
+                    TextFormField(
+                      controller: _firstNameController,
+                      keyboardType: TextInputType.text,
+                      decoration: _inputDecoration1.copyWith(
+                        hintText: 'Enter First Name',
+                      ),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]')),
+                      ],
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return '* This field is compulsory';
+                        }
+                        return null;
                       },
                     ),
-                  ),
-                  const SizedBox(
-                    height: 105,
-                  ),
-                ],
+                    const SizedBox(
+                      height: 22,
+                    ),
+                    Text(
+                      'Last Name*',
+                      style: AxleTextStyle.poppins12w400,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    TextFormField(
+                      controller: _lastNameController,
+                      keyboardType: TextInputType.text,
+                      decoration: _inputDecoration1.copyWith(
+                        hintText: 'Enter Last Name',
+                      ),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]')),
+                      ],
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return '* This field is compulsory';
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(
+                      height: 22,
+                    ),
+                    Text(
+                      'Mobile Number*',
+                      style: AxleTextStyle.poppins12w400,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    TextFormField(
+                      controller: _mobileController,
+                      keyboardType: TextInputType.number,
+                      decoration: _inputDecoration1.copyWith(
+                        hintText: 'Enter Mobile Number',
+                      ),
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+                      ],
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return '* This field is compulsory';
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(
+                      height: 22,
+                    ),
+                    Text(
+                      'PAN Number*',
+                      style: AxleTextStyle.poppins12w400,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    enterOtpTextBar(),
+                    const SizedBox(
+                      height: 105,
+                    ),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: navigationButton(
+                        onTap: () async {
+                          await validatePan();
+                        },
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 105,
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

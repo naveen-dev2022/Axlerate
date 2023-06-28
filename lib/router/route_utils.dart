@@ -402,6 +402,12 @@ class RouteUtils {
     return '/app/${orgId.toLowerCase()}/e-card-verification/credit-score';
   }
 
+  static String getCbilScoreHistoryPath() {
+    String orgId =
+        sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
+    return '/app/${orgId.toLowerCase()}/e-card-verification/credit-score-history';
+  }
+
   // static String getCreatePaymentsPath() {
   //   String orgId = sharedPreferences.getString(Storage.currentlyPickedOrgEnrollId) ?? "";
   //   return '/app/${orgId.toLowerCase()}/payments/create';

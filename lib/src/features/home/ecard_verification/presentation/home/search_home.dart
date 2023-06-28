@@ -101,7 +101,20 @@ class _SearchDashboardHomeState extends State<SearchDashboardHome> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 22,
+                height: 6,
+              ),
+              IconButton(
+                onPressed: () {
+                  context.router.pop();
+                },
+                icon: const Icon(
+                  Icons.arrow_back_ios,
+                  size: 18,
+                  color: AxleColors.axlePrimaryColor,
+                ),
+              ),
+              const SizedBox(
+                height: 6,
               ),
               enterOtpTextBar(),
               const SizedBox(
@@ -109,7 +122,7 @@ class _SearchDashboardHomeState extends State<SearchDashboardHome> {
               ),
               Text(
                 "Recommended",
-                style: AxleTextStyle.headingPrimary,
+                style: AxleTextStyle.poppins14w500,
               ),
               const SizedBox(
                 height: 23,
@@ -148,7 +161,10 @@ class _SearchDashboardHomeState extends State<SearchDashboardHome> {
         const SizedBox(
           width: 18,
         ),
-        Text(title),
+        Text(
+          title,
+          style: AxleTextStyle.poppins12w500,
+        ),
         Expanded(child: Container()),
         Container(
           decoration: BoxDecoration(

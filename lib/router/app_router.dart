@@ -612,6 +612,12 @@ class AppNewRouter extends $AppNewRouter {
                                   TransitionsBuilders.noTransition,
                             ),
                             CustomRoute(
+                              path: 'credit-score-history',
+                              page: CreditScoreHistory.page,
+                              transitionsBuilder:
+                                  TransitionsBuilders.noTransition,
+                            ),
+                            CustomRoute(
                               path: 'credit-score-detail',
                               page: CibilRoute.page,
                               transitionsBuilder:

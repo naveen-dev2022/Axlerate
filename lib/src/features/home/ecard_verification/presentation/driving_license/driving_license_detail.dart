@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:axlerate/Themes/axle_colors.dart';
 import 'package:axlerate/src/features/home/ecard_verification/presentation/rc_screen/rc_card_item.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,7 @@ import '../../../../../../responsive.dart';
 import '../../../../../../values/constants.dart';
 import '../../../../../utils/axle_loader.dart';
 import '../../domain/driving_license_entity.dart';
+import '../common/common_widgets.dart';
 import '../controller/ecard_controller.dart';
 
 import 'dart:convert';
@@ -67,25 +69,10 @@ class _DrivingLicenseScreenState extends ConsumerState<DrivingLicenseScreen> {
           ? AxleLoader.axleProgressIndicator()
           : Stack(
               children: [
-                Positioned(
-                  bottom: 0,
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: SvgPicture.asset(
-                      'assets/images/bg_stack.svg',
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ),
+                ECardVerificationWidgets.drawBGStackImageWidget(
+                  context: context,
                 ),
-                Positioned(
-                  bottom: 20,
-                  left: MediaQuery.of(context).size.width / 2 - 120 / 2,
-                  child: SvgPicture.asset(
-                    'assets/images/logo.svg',
-                    width: 100,
-                    height: 25,
-                  ),
-                ),
+                ECardVerificationWidgets.drawLogoWidget(context: context),
                 _buildRcDetail(drivingLicenseEntity)
               ],
             ),
@@ -107,54 +94,29 @@ class _DrivingLicenseScreenState extends ConsumerState<DrivingLicenseScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 16,
+                height: 8,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color(0x1A000000),
-                      offset: Offset(0, 10),
-                      blurRadius: 25,
-                      spreadRadius: 0,
-                    ),
-                  ],
-                  color: Colors.white,
-                  border: Border.all(
-                    color: AxleColors.axleSecondaryColor,
-                    width: 1.5,
-                  ),
+              IconButton(
+                onPressed: () {
+                  context.router.pop();
+                },
+                icon: const Icon(
+                  Icons.arrow_back_ios,
+                  size: 18,
+                  color: AxleColors.axlePrimaryColor,
                 ),
-                child: ListTile(
-                  leading: SvgPicture.asset('assets/images/rc_detail.svg'),
-                  title: const Text('Driving License Number'),
-                  subtitle: Text("${data?.licenseNumber}"),
-                ),
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              ECardVerificationWidgets.detailHeadingCard(
+                icon: 'assets/images/rc_detail.svg',
+                title: 'Driving License Number',
+                subTitle: data?.licenseNumber,
               ),
               const SizedBox(
                 height: 120,
               ),
-              /* if (drivingLicenseEntity.data?.hasImage ?? false) ...[
-              Transform.translate(
-                offset: Offset(0, 20),
-                child: CircleAvatar(
-                  radius: 50,
-                  backgroundImage: MemoryImage(base64Decode(
-                      "${drivingLicenseEntity.data?.profileImage}")),
-                ),
-              ),
-            ] else ...[
-              const CircleAvatar(
-                radius: 50,
-                backgroundImage: NetworkImage(
-                    'https://www.sarojhospital.com/images/testimonials/dummy-profile.png'),
-              ),
-            ],*/
-              /*   Transform.translate(
-              offset: Offset(0, -20),
-              child:
-            ),*/
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
@@ -176,19 +138,34 @@ class _DrivingLicenseScreenState extends ConsumerState<DrivingLicenseScreen> {
                   children: [
                     Align(
                       alignment: Alignment.center,
-                      child: Text('${data?.name}'),
+                      child: Text(
+                        '${data?.name}',
+                        style: AxleTextStyle.poppins16w400.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xff252525)),
+                      ),
                     ),
                     const SizedBox(height: 12),
-                    _buildKeyValue(key: 'Gender', value: data?.gender ?? ""),
-                    _buildKeyValue(
-                        key: 'Date of Birth', value: data?.dob ?? ""),
-                    _buildKeyValue(
-                        key: 'Citizenship', value: data?.citizenship ?? ""),
-                    _buildKeyValue(
-                        key: 'Father/Husband’s Name',
-                        value: data?.fatherOrHusbandName ?? ""),
-                    _buildKeyValue(
-                        key: 'Blood Group', value: data?.bloodGroup ?? ""),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Gender',
+                      value: data?.gender ?? "",
+                    ),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Date of Birth',
+                      value: data?.dob,
+                    ),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Citizenship',
+                      value: data?.citizenship,
+                    ),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Father/Husband’s Name',
+                      value: data?.fatherOrHusbandName,
+                    ),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Blood Group',
+                      value: data?.bloodGroup,
+                    ),
                   ],
                 ),
               ),
@@ -214,16 +191,21 @@ class _DrivingLicenseScreenState extends ConsumerState<DrivingLicenseScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Address Details of Owner'),
+                    Text(
+                      'Address Details of Owner',
+                      style: AxleTextStyle.poppins14w500Blue,
+                    ),
                     const SizedBox(
                       height: 12,
                     ),
-                    _buildKeyValue(
-                        key: 'Permanent Address',
-                        value: data?.permanentAddress ?? ""),
-                    _buildKeyValue(
-                        key: 'Temporary Address',
-                        value: data?.temporaryAddress ?? ""),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Permanent Address',
+                      value: data?.permanentAddress,
+                    ),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Temporary Address',
+                      value: data?.temporaryAddress,
+                    ),
                   ],
                 ),
               ),
@@ -249,21 +231,37 @@ class _DrivingLicenseScreenState extends ConsumerState<DrivingLicenseScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Driving License Details'),
+                    Text(
+                      'Driving License Details',
+                      style: AxleTextStyle.poppins14w500Blue,
+                    ),
                     const SizedBox(
                       height: 12,
                     ),
-                    _buildKeyValue(
-                        key: 'Driving License Number',
-                        value: data?.licenseNumber ?? ""),
-                    _buildKeyValue(key: 'State', value: data?.state ?? ""),
-                    _buildKeyValue(key: 'Issued on', value: data?.doe ?? ""),
-                    _buildKeyValue(key: 'Expires on', value: data?.doi ?? ""),
-                    _buildKeyValue(
-                        key: 'Licensing Authority', value: data?.doi ?? ""),
-                    _buildKeyValue(
-                        key: 'Vehicle Class',
-                        value: data?.vehicleClasses.toString() ?? ""),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Driving License Number',
+                      value: data?.licenseNumber,
+                    ),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'State',
+                      value: data?.state,
+                    ),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Issued on',
+                      value: data?.doe,
+                    ),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Expires on',
+                      value: data?.doi,
+                    ),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Licensing Authority',
+                      value: data?.doi,
+                    ),
+                    ECardVerificationWidgets.buildKeyValue(
+                      key: 'Vehicle Class',
+                      value: data?.vehicleClasses.toString(),
+                    ),
                   ],
                 ),
               ),
@@ -275,7 +273,7 @@ class _DrivingLicenseScreenState extends ConsumerState<DrivingLicenseScreen> {
           if (drivingLicenseEntity.data?.hasImage ?? false) ...[
             Positioned(
               left: MediaQuery.of(context).size.width / 2 - 120 / 2,
-              top: 120,
+              top: 160,
               child: CircleAvatar(
                 radius: 50,
                 backgroundImage: MemoryImage(
@@ -285,7 +283,7 @@ class _DrivingLicenseScreenState extends ConsumerState<DrivingLicenseScreen> {
           ] else ...[
             Positioned(
               left: MediaQuery.of(context).size.width / 2 - 120 / 2,
-              top: 120,
+              top: 160,
               child: const CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
@@ -295,33 +293,6 @@ class _DrivingLicenseScreenState extends ConsumerState<DrivingLicenseScreen> {
           ],
         ],
       )),
-    );
-  }
-
-  Widget _buildKeyValue({required String key, required String value}) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(key),
-            const SizedBox(
-              width: 25,
-            ),
-            Flexible(
-              fit: FlexFit.loose,
-              child: Text(
-                value,
-                softWrap: false,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(
-          height: 10,
-        )
-      ],
     );
   }
 }

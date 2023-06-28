@@ -67,25 +67,35 @@ Widget navigationButton({required Function()? onTap}) {
 }
 
 Widget infoWidget() {
-  return Container(
-    decoration: BoxDecoration(
-      color: AxleColors.axleBgYellow,
-      borderRadius: BorderRadius.circular(8.0),
-      border: Border.all(color: AxleColors.axleSecondaryColor),
-    ),
-    padding: const EdgeInsets.all(4),
-    child: const Row(
-      children: [
-        Icon(
-          Icons.info_outlined,
-          size: 16,
-          color: AxleColors.axlePrimaryColor,
-        ),
-        SizedBox(
-          width: 6,
-        ),
-        Text('You can check your details once every 3 months')
-      ],
+  return FittedBox(
+    child: Container(
+      decoration: BoxDecoration(
+        color: AxleColors.axleBgYellow,
+        borderRadius: BorderRadius.circular(8.0),
+        border: Border.all(color: AxleColors.axleSecondaryColor),
+      ),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 8,
+      ),
+      child: Row(
+        children: [
+          const SizedBox(
+            width: 25,
+          ),
+          SvgPicture.asset('assets/images/info.svg'),
+          const SizedBox(
+            width: 6,
+          ),
+          Text(
+            'You can check your details once every 3 months',
+            style: AxleTextStyle.sfPro13w400,
+          ),
+          const SizedBox(
+            width: 25,
+          ),
+        ],
+      ),
     ),
   );
 }
@@ -163,6 +173,7 @@ class _EcardVerificationDashboardState
             },
             decoration: InputDecoration(
               hintText: 'Search',
+              hintStyle: AxleTextStyle.poppins16w400,
               fillColor: Colors.white,
               filled: true,
               contentPadding: const EdgeInsets.symmetric(
@@ -208,7 +219,7 @@ class _EcardVerificationDashboardState
                 ),
                 Text(
                   "Verify Details",
-                  style: AxleTextStyle.headingPrimary,
+                  style: AxleTextStyle.poppins14w500,
                 ),
                 const SizedBox(
                   height: 16,

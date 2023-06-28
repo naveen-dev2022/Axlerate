@@ -2,6 +2,7 @@ import 'package:auto_route/annotations.dart';
 import 'package:axlerate/Themes/axle_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import '../../../../../../Themes/text_style_config.dart';
 import '../../../../../../responsive.dart';
@@ -9,6 +10,7 @@ import '../../../../../../values/constants.dart';
 import '../../../../../utils/axle_loader.dart';
 import '../../../../../utils/date_time_helper.dart';
 import '../../domain/challan_entity.dart';
+import '../common/common_widgets.dart';
 import '../controller/ecard_controller.dart';
 
 @RoutePage()
@@ -20,7 +22,7 @@ class ChallanScreen extends ConsumerStatefulWidget {
 }
 
 class _ChallanScreenState extends ConsumerState<ChallanScreen> {
-  late EmployeeDataSource employeeDataSource;
+  // late EmployeeDataSource employeeDataSource;
   bool isMobile = false;
 
   @override
@@ -42,238 +44,192 @@ class _ChallanScreenState extends ConsumerState<ChallanScreen> {
       backgroundColor: AxleColors.axleBackgroundColor,
       body: challanList == null
           ? AxleLoader.axleProgressIndicator()
-          : Padding(
-              padding: isMobile
-                  ? const EdgeInsets.symmetric(horizontal: defaultMobilePadding)
-                  : const EdgeInsets.all(defaultPadding),
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: defaultPadding,
-                      ),
-                      child: Text(
-                        "Challan",
-                        style: AxleTextStyle.headingPrimary,
+          : SizedBox(
+              height: MediaQuery.of(context).size.height,
+              child: Stack(
+                children: [
+                  ECardVerificationWidgets.drawBGStackImageWidget(
+                    context: context,
+                  ),
+                  ECardVerificationWidgets.drawLogoWidget(context: context),
+                  _buildChallanDetail(challanList)
+                ],
+              ),
+            ),
+    );
+  }
+
+  Widget _buildChallanDetail(ChallanEntity? challanList) {
+    final data = challanList!.data;
+    return Padding(
+      padding: isMobile
+          ? const EdgeInsets.symmetric(horizontal: defaultPadding)
+          : const EdgeInsets.symmetric(
+              horizontal: horizontalPadding, vertical: verticalPadding),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 16,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color(0x1A000000),
+                    offset: Offset(0, 10),
+                    blurRadius: 25,
+                    spreadRadius: 0,
+                  ),
+                ],
+                color: Colors.white,
+                border: Border.all(
+                  color: AxleColors.axleSecondaryColor,
+                  width: 1.5,
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 18, top: 12),
+                    child: Text(
+                      'Owner Name',
+                      style: AxleTextStyle.poppins12w400,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 32),
+                    child: Text(
+                      data?.challans?[0].ownerName ?? "",
+                      style: AxleTextStyle.poppins16w400
+                          .copyWith(color: const Color(0xff252525)),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20, right: 20, top: 12),
+                    child: Divider(),
+                  ),
+                  ListTile(
+                    leading: SvgPicture.asset('assets/images/rc_detail.svg'),
+                    title: Text(
+                      'Vehicle Number',
+                      style: AxleTextStyle.poppins12w400,
+                    ),
+                    subtitle: Text(
+                      "${data?.challans?[0].challanNo}",
+                      style: AxleTextStyle.poppins16w400
+                          .copyWith(color: const Color(0xff252525)),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 6,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Text(
+              'Recent Violations',
+              style: AxleTextStyle.poppins14w500Blue,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            ListTile(
+              leading: SvgPicture.asset('assets/images/paid.svg'),
+              title: Text(
+                "${data?.challans?[0].rcDlNo}",
+                style: AxleTextStyle.poppins16w500Black,
+              ),
+              subtitle: RichText(
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'Johann George | TN 22 CZ 1248\n',
+                      style: AxleTextStyle.poppins14w300Grey,
+                    ),
+                    TextSpan(
+                        text: '19 Mar 2023, 19:08:22',
+                        style: AxleTextStyle.poppins14w300Grey.copyWith(
+                          fontSize: 12,
+                        )),
+                  ],
+                ),
+              ),
+              trailing: RichText(
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: '1,000.00\n',
+                      style: AxleTextStyle.poppins14w300Grey.copyWith(
+                        color: AxleColors.axleGreenColor,
                       ),
                     ),
-                    _loadChallanData(
-                      challanList,
+                    TextSpan(
+                      text: 'Paid',
+                      style: AxleTextStyle.poppins14w300Grey.copyWith(
+                          color: AxleColors.axleGreenColor, fontSize: 12),
                     ),
                   ],
                 ),
               ),
             ),
+            const SizedBox(
+              height: 16,
+            ),
+            ListTile(
+              leading: SvgPicture.asset('assets/images/pending_payment.svg'),
+              title: Text(
+                "${data?.challans?[0].rcDlNo}",
+                style: AxleTextStyle.poppins16w500Black,
+              ),
+              subtitle: RichText(
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'Johann George | TN 22 CZ 1248\n',
+                      style: AxleTextStyle.poppins14w300Grey,
+                    ),
+                    TextSpan(
+                        text: '19 Mar 2023, 19:08:22',
+                        style: AxleTextStyle.poppins14w300Grey.copyWith(
+                          fontSize: 12,
+                        )),
+                  ],
+                ),
+              ),
+              trailing: RichText(
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: '1,000.00\n',
+                      style: AxleTextStyle.poppins14w300Grey.copyWith(
+                        color: AxleColors.axleRedColor,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'Pending',
+                      style: AxleTextStyle.poppins14w300Grey.copyWith(
+                          color: AxleColors.axleRedColor, fontSize: 12),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 150,
+            ),
+          ],
+        ),
+      ),
     );
-  }
-
-  Widget _loadChallanData(ChallanEntity? challanList) {
-    employeeDataSource =
-        EmployeeDataSource(employeeData: challanList!.data!.challans!);
-    return SfDataGrid(
-      source: employeeDataSource,
-      columnWidthMode: ColumnWidthMode.fill,
-      columns: <GridColumn>[
-        GridColumn(
-          columnName: 'Challan No',
-          label: Container(
-            color: AxleColors.axlePrimaryColor,
-            padding: const EdgeInsets.all(defaultMobilePadding),
-            alignment: Alignment.center,
-            child: const Text(
-              'Challan No',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'Date',
-          label: Container(
-            color: AxleColors.axlePrimaryColor,
-            padding: const EdgeInsets.all(defaultMobilePadding),
-            alignment: Alignment.center,
-            child: const Text(
-              'Date',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'RcDlNo',
-          label: Container(
-            color: AxleColors.axlePrimaryColor,
-            padding: const EdgeInsets.all(defaultMobilePadding),
-            alignment: Alignment.center,
-            child: const Text(
-              'RcDlNo',
-              overflow: TextOverflow.ellipsis,
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'OwnerName',
-          label: Container(
-            color: AxleColors.axlePrimaryColor,
-            padding: const EdgeInsets.all(defaultMobilePadding),
-            alignment: Alignment.center,
-            child: const Text(
-              'Owner Name',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'AccusedName',
-          label: Container(
-            color: AxleColors.axlePrimaryColor,
-            padding: const EdgeInsets.all(defaultMobilePadding),
-            alignment: Alignment.center,
-            child: const Text(
-              'Accused Name',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'ChallanStatus',
-          label: Container(
-            color: AxleColors.axlePrimaryColor,
-            padding: const EdgeInsets.all(defaultMobilePadding),
-            alignment: Alignment.center,
-            child: const Text(
-              'Challan Status',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'PaymentSource',
-          label: Container(
-            color: AxleColors.axlePrimaryColor,
-            padding: const EdgeInsets.all(defaultMobilePadding),
-            alignment: Alignment.center,
-            child: const Text(
-              'Payment Source',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'Amount',
-          label: Container(
-            color: AxleColors.axlePrimaryColor,
-            padding: const EdgeInsets.all(defaultMobilePadding),
-            alignment: Alignment.center,
-            child: const Text(
-              'Amount',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'State',
-          label: Container(
-            color: AxleColors.axlePrimaryColor,
-            padding: const EdgeInsets.all(defaultMobilePadding),
-            alignment: Alignment.center,
-            child: const Text(
-              'State',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'Area',
-          label: Container(
-            color: AxleColors.axlePrimaryColor,
-            padding: const EdgeInsets.all(defaultMobilePadding),
-            alignment: Alignment.center,
-            child: const Text(
-              'Area',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource({required List<Challans> employeeData}) {
-    _employeeData = employeeData
-        .map<DataGridRow>((e) => DataGridRow(cells: [
-              DataGridCell<String>(
-                columnName: 'Challan No',
-                value: e.challanNo,
-              ),
-              DataGridCell<String>(
-                columnName: 'Date',
-                value: DateTimeHelper.dateDisplayFromString(e.date!),
-              ),
-              DataGridCell<String>(
-                columnName: 'RcDlNo',
-                value: e.rcDlNo,
-              ),
-              DataGridCell<String>(
-                columnName: 'OwnerName',
-                value: e.ownerName,
-              ),
-              DataGridCell<String>(
-                columnName: 'AccusedName',
-                value: e.accusedName,
-              ),
-              DataGridCell<String>(
-                columnName: 'ChallanStatus',
-                value: e.challanStatus,
-              ),
-              DataGridCell<String>(
-                columnName: 'PaymentSource',
-                value: e.paymentSource,
-              ),
-              DataGridCell<int>(
-                columnName: 'Amount',
-                value: e.amount?.toInt(),
-              ),
-              DataGridCell<String>(
-                columnName: 'State',
-                value: e.state,
-              ),
-              DataGridCell<String>(
-                columnName: 'Area',
-                value: e.area,
-              ),
-            ]))
-        .toList();
-  }
-
-  List<DataGridRow> _employeeData = [];
-
-  @override
-  List<DataGridRow> get rows => _employeeData;
-
-  @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
-    return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((e) {
-      return Container(
-        alignment: Alignment.center,
-        padding: const EdgeInsets.all(8.0),
-        child: Text(e.value.toString()),
-      );
-    }).toList());
   }
 }

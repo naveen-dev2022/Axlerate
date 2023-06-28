@@ -1,6 +1,7 @@
 import 'package:axlerate/Themes/axle_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../../../../../Themes/text_style_config.dart';
 import 'ecard_dashboard.dart';
 
 class DashboardCard extends StatelessWidget {
@@ -69,7 +70,10 @@ class DashboardCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(title!),
+                Text(
+                  title!,
+                  style: AxleTextStyle.poppins12w500,
+                ),
                 const Icon(
                   Icons.arrow_forward,
                   color: AxleColors.axlePrimaryColor,

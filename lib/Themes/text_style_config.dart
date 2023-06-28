@@ -4,40 +4,85 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AxleTextStyle {
-  static final bodySmall =
-      GoogleFonts.manrope(fontSize: 12, letterSpacing: 0.40, fontWeight: FontWeight.w400, color: primaryColor);
-  static final bodyMedium =
-      GoogleFonts.manrope(fontSize: 14, letterSpacing: 0.25, fontWeight: FontWeight.w400, color: primaryColor);
-  static final bodyLarge =
-      GoogleFonts.manrope(fontSize: 16, letterSpacing: 0.50, fontWeight: FontWeight.w400, color: primaryColor);
+  static final bodySmall = GoogleFonts.manrope(
+      fontSize: 12,
+      letterSpacing: 0.40,
+      fontWeight: FontWeight.w400,
+      color: primaryColor);
+  static final bodyMedium = GoogleFonts.manrope(
+      fontSize: 14,
+      letterSpacing: 0.25,
+      fontWeight: FontWeight.w400,
+      color: primaryColor);
+  static final bodyLarge = GoogleFonts.manrope(
+      fontSize: 16,
+      letterSpacing: 0.50,
+      fontWeight: FontWeight.w400,
+      color: primaryColor);
 
-  static final labelSmall =
-      GoogleFonts.manrope(fontSize: 11, letterSpacing: 0.50, fontWeight: FontWeight.w500, color: primaryColor);
-  static final labelMedium =
-      GoogleFonts.manrope(fontSize: 12, letterSpacing: 0.50, fontWeight: FontWeight.w500, color: primaryColor);
-  static final labelLarge =
-      GoogleFonts.manrope(fontSize: 14, letterSpacing: 0.10, fontWeight: FontWeight.w500, color: primaryColor);
+  static final labelSmall = GoogleFonts.manrope(
+      fontSize: 11,
+      letterSpacing: 0.50,
+      fontWeight: FontWeight.w500,
+      color: primaryColor);
+  static final labelMedium = GoogleFonts.manrope(
+      fontSize: 12,
+      letterSpacing: 0.50,
+      fontWeight: FontWeight.w500,
+      color: primaryColor);
+  static final labelLarge = GoogleFonts.manrope(
+      fontSize: 14,
+      letterSpacing: 0.10,
+      fontWeight: FontWeight.w500,
+      color: primaryColor);
 
-  static final titleSmall =
-      GoogleFonts.manrope(fontSize: 14, letterSpacing: 0.10, fontWeight: FontWeight.w500, color: primaryColor);
-  static final titleMedium =
-      GoogleFonts.manrope(fontSize: 16, letterSpacing: 0.15, fontWeight: FontWeight.w500, color: primaryColor);
-  static final titleLarge =
-      GoogleFonts.manrope(fontSize: 22, letterSpacing: 0.00, fontWeight: FontWeight.w400, color: primaryColor);
+  static final titleSmall = GoogleFonts.manrope(
+      fontSize: 14,
+      letterSpacing: 0.10,
+      fontWeight: FontWeight.w500,
+      color: primaryColor);
+  static final titleMedium = GoogleFonts.manrope(
+      fontSize: 16,
+      letterSpacing: 0.15,
+      fontWeight: FontWeight.w500,
+      color: primaryColor);
+  static final titleLarge = GoogleFonts.manrope(
+      fontSize: 22,
+      letterSpacing: 0.00,
+      fontWeight: FontWeight.w400,
+      color: primaryColor);
 
-  static final headlineSmall =
-      GoogleFonts.manrope(fontSize: 24, letterSpacing: 0.00, fontWeight: FontWeight.w400, color: primaryColor);
-  static final headlineMedium =
-      GoogleFonts.manrope(fontSize: 28, letterSpacing: 0.00, fontWeight: FontWeight.w400, color: primaryColor);
-  static final headlineLarge =
-      GoogleFonts.manrope(fontSize: 32, letterSpacing: 0.00, fontWeight: FontWeight.w400, color: primaryColor);
+  static final headlineSmall = GoogleFonts.manrope(
+      fontSize: 24,
+      letterSpacing: 0.00,
+      fontWeight: FontWeight.w400,
+      color: primaryColor);
+  static final headlineMedium = GoogleFonts.manrope(
+      fontSize: 28,
+      letterSpacing: 0.00,
+      fontWeight: FontWeight.w400,
+      color: primaryColor);
+  static final headlineLarge = GoogleFonts.manrope(
+      fontSize: 32,
+      letterSpacing: 0.00,
+      fontWeight: FontWeight.w400,
+      color: primaryColor);
 
-  static final displaySmall =
-      GoogleFonts.manrope(fontSize: 36, letterSpacing: 0.00, fontWeight: FontWeight.w400, color: primaryColor);
-  static final displayMedium =
-      GoogleFonts.manrope(fontSize: 45, letterSpacing: 0.00, fontWeight: FontWeight.w400, color: primaryColor);
-  static final displayLarge =
-      GoogleFonts.manrope(fontSize: 57, letterSpacing: 0.00, fontWeight: FontWeight.w400, color: primaryColor);
+  static final displaySmall = GoogleFonts.manrope(
+      fontSize: 36,
+      letterSpacing: 0.00,
+      fontWeight: FontWeight.w400,
+      color: primaryColor);
+  static final displayMedium = GoogleFonts.manrope(
+      fontSize: 45,
+      letterSpacing: 0.00,
+      fontWeight: FontWeight.w400,
+      color: primaryColor);
+  static final displayLarge = GoogleFonts.manrope(
+      fontSize: 57,
+      letterSpacing: 0.00,
+      fontWeight: FontWeight.w400,
+      color: primaryColor);
 
   static final subtitle1BlackBold = GoogleFonts.manrope(
     fontSize: 16.0,
@@ -513,13 +558,22 @@ class AxleTextStyle {
   ));
 
   static final gpsCardValueText = GoogleFonts.manrope(
-      textStyle: const TextStyle(fontSize: 32.0, fontWeight: FontWeight.w700, color: Colors.black, height: 0));
+      textStyle: const TextStyle(
+          fontSize: 32.0,
+          fontWeight: FontWeight.w700,
+          color: Colors.black,
+          height: 0));
 
   static final gpsCardUnitText = GoogleFonts.manrope(
-      textStyle: const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500, color: Color(0xFF809FB8), height: 1));
+      textStyle: const TextStyle(
+          fontSize: 16.0,
+          fontWeight: FontWeight.w500,
+          color: Color(0xFF809FB8),
+          height: 1));
 
-  static final someTitlew50016black =
-      GoogleFonts.manrope(textStyle: const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500, color: Colors.black));
+  static final someTitlew50016black = GoogleFonts.manrope(
+      textStyle: const TextStyle(
+          fontSize: 16.0, fontWeight: FontWeight.w500, color: Colors.black));
 
   static final thresholdLimitValue = GoogleFonts.manrope(
       textStyle: const TextStyle(
@@ -528,18 +582,109 @@ class AxleTextStyle {
     color: Color(0xFF809FB8),
   ));
 
-  static final ppiCardTitle =
-      GoogleFonts.manrope(textStyle: const TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, color: Colors.white));
+  static final ppiCardTitle = GoogleFonts.manrope(
+      textStyle: const TextStyle(
+          fontSize: 18.0, fontWeight: FontWeight.w600, color: Colors.white));
 
   static final ppiCardBalance = GoogleFonts.manrope(
-      textStyle: const TextStyle(fontSize: 48.0, fontWeight: FontWeight.w800, color: Colors.white, height: 0.9));
+      textStyle: const TextStyle(
+          fontSize: 48.0,
+          fontWeight: FontWeight.w800,
+          color: Colors.white,
+          height: 0.9));
 
-  static final ppiOverviewCardValueText =
-      GoogleFonts.manrope(textStyle: const TextStyle(fontSize: 28.0, fontWeight: FontWeight.w800, color: Colors.white));
+  static final ppiOverviewCardValueText = GoogleFonts.manrope(
+      textStyle: const TextStyle(
+          fontSize: 28.0, fontWeight: FontWeight.w800, color: Colors.white));
 
-  static final ppiChartTooltipValue =
-      GoogleFonts.manrope(textStyle: const TextStyle(fontSize: 14.0, fontWeight: FontWeight.w800, color: Colors.white));
+  static final ppiChartTooltipValue = GoogleFonts.manrope(
+      textStyle: const TextStyle(
+          fontSize: 14.0, fontWeight: FontWeight.w800, color: Colors.white));
 
   static final ppiChartTooltipDate = GoogleFonts.manrope(
-      textStyle: const TextStyle(fontSize: 14.0, fontWeight: FontWeight.w800, color: Color(0xFF94989C)));
+      textStyle: const TextStyle(
+          fontSize: 14.0,
+          fontWeight: FontWeight.w800,
+          color: Color(0xFF94989C)));
+
+  ///  E-CARD STYLES
+  static final poppins14w500 = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w500,
+      color: Color(0xff8892A9),
+    ),
+  );
+
+  static final poppins12w500 = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+      fontSize: 12.0,
+      fontWeight: FontWeight.w500,
+      color: Color(0xff252525),
+    ),
+  );
+
+  static final poppins12w500liteGrey = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w500,
+      color: Color(0xff8892A9),
+    ),
+  );
+
+  static final poppins16w400 = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+      fontSize: 16.0,
+      fontWeight: FontWeight.w400,
+      color: Color(0xff8892A9),
+    ),
+  );
+
+  static final poppins12w400 = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+      fontSize: 12.0,
+      fontWeight: FontWeight.w400,
+      color: Color(0xff8892A9),
+    ),
+  );
+
+  static final sfPro13w400 = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+      fontSize: 13.0,
+      fontWeight: FontWeight.w400,
+      color: Colors.black87,
+    ),
+  );
+
+  static final poppins18w600 = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+      fontSize: 18.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.black87,
+    ),
+  );
+
+  static final poppins14w500Blue = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w500,
+      color: Color(0xff00499B),
+    ),
+  );
+
+  static final poppins16w500Black = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+      fontSize: 16.0,
+      fontWeight: FontWeight.w500,
+      color: Color(0xff252525),
+    ),
+  );
+
+  static final poppins14w300Grey = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w300,
+      color: Color(0xff8B9197),
+    ),
+  );
 }

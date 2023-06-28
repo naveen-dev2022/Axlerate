@@ -5,12 +5,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../../Themes/axle_colors.dart';
+import '../../../../../../Themes/text_style_config.dart';
 import '../../../../../../responsive.dart';
 import '../../../../../../router/route_utils.dart';
 import '../../../../../utils/loading_overlay_widget.dart';
 import '../../../../../utils/snackbar_util.dart';
 import '../../domain/aadhaar_otp_verified_model.dart';
-import '../common/dynamic_verification_card.dart';
+import '../common/common_widgets.dart';
 import '../controller/ecard_controller.dart';
 import '../home/ecard_dashboard.dart';
 
@@ -115,13 +116,31 @@ class _AadharOtpScreenState extends ConsumerState<AadharOtpScreen> {
                         const SizedBox(
                           height: 16,
                         ),
-                        const Text('Enter OTP'),
+                        Text(
+                          'Enter OTP',
+                          style: AxleTextStyle.poppins18w600,
+                        ),
                         const SizedBox(
                           height: 7,
                         ),
-                        const Text(
-                          'An OTP has been sent to\n${8220055432}',
+                        RichText(
                           textAlign: TextAlign.center,
+                          text: TextSpan(
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: 'An OTP has been sent to\n',
+                                style: AxleTextStyle.poppins12w400.copyWith(
+                                  color: const Color(0xff8B9197),
+                                ),
+                              ),
+                              TextSpan(
+                                text: '8220055432',
+                                style: AxleTextStyle.poppins12w400.copyWith(
+                                  color: const Color(0xff00499B),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                         const SizedBox(
                           height: 7,
@@ -130,13 +149,31 @@ class _AadharOtpScreenState extends ConsumerState<AadharOtpScreen> {
                         const SizedBox(
                           height: 16,
                         ),
-                        const Text('Incorrect OTP'),
+                        Text(
+                          'Incorrect OTP',
+                          style: AxleTextStyle.poppins18w600,
+                        ),
                         const SizedBox(
                           height: 7,
                         ),
-                        const Text(
-                          'Please enter the correct OTP sent to \n91234 54321',
+                        RichText(
                           textAlign: TextAlign.center,
+                          text: TextSpan(
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: 'Please enter the correct OTP sent to\n',
+                                style: AxleTextStyle.poppins12w400.copyWith(
+                                  color: const Color(0xff8B9197),
+                                ),
+                              ),
+                              TextSpan(
+                                text: '91234 54321',
+                                style: AxleTextStyle.poppins12w400.copyWith(
+                                  color: const Color(0xff00499B),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                         const SizedBox(
                           height: 7,
@@ -290,7 +327,25 @@ class _AadharOtpScreenState extends ConsumerState<AadharOtpScreen> {
                   ),
                 ],
               ),
-              const Text('Resend OTP? 00:30'),
+              RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'Resend OTP? ',
+                      style: AxleTextStyle.poppins12w400.copyWith(
+                        color: const Color(0xff8B9197),
+                      ),
+                    ),
+                    TextSpan(
+                      text: '00:30',
+                      style: AxleTextStyle.poppins12w400.copyWith(
+                        color: const Color(0xff00499B),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         );
